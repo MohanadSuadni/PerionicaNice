@@ -135,31 +135,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* MODAL: O nama */}
+   {/* About Modal */}
       {isAboutOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="bg-white rounded-2xl shadow-xl p-6 max-w-lg w-[90%] text-center relative animate-fadeIn overflow-y-auto max-h-[80vh]">
             <h2 className="text-2xl font-bold text-[#08647d] mb-4">O nama</h2>
-
             <p className="text-gray-700 mb-4 leading-relaxed">
-              Perionica veša <span className="font-semibold">&quot;Nice&quot;</span> je
-              lokalna firma iz Obrenovca koja već godinama pruža vrhunske usluge.
+              Perionica veša <span className="font-semibold">&quot;Nice&quot;</span> je lokalna firma iz Obrenovca koja već godinama pruža vrhunske usluge pranja i peglanja veša građanima Beograda i okoline.
             </p>
-
-            <h3 className="text-xl font-semibold text-[#08647d] mt-4 mb-2">
-              Naša misija
-            </h3>
-
+            <h3 className="text-xl font-semibold text-[#08647d] mt-4 mb-2">Naša misija</h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Naša misija je da vam vratimo vreme dok mi brinemo o vašem vešu.
+              Verujemo da svaki komad veša zaslužuje pažnju i profesionalno rukovanje. Naša misija je da vam vratimo vreme koje biste potrošili na pranje i peglanje, omogućavajući vam da se fokusirate na važnije stvari u životu, dok mi brinemo o vašem vešu sa pažnjom koju zaslužuje.
             </p>
-
-            <button
-              onClick={() => setIsAboutOpen(false)}
-              className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition"
-            >
-              Zatvori
-            </button>
+            <button onClick={() => setIsAboutOpen(false)} className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition">Zatvori</button>
           </div>
         </div>
       )}
