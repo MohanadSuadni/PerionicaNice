@@ -53,7 +53,7 @@ export default function Hero() {
         {/* Wrapper za max širinu i marginu sa leve strane */}
         <div className="w-full lg:max-w-[900px] lg:ml-12  ">
  <h1 className="text-3xl lg:text-6xl sm:text-3xl font-[Inter] lg:font-[Inter] drop-shadow-lg text-white space-x-3">
- Perionica veša "Nice"            
+ Perionica veša Nice            
           </h1>
 
           <h2 className="text-3xl  lg:text-5xl sm:text-1xl font-[Inter] lg:font-[Inter] drop-shadow-lg text-white space-x-1">
