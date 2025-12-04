@@ -43,7 +43,7 @@ export default function Footer() {
 
         <div className="flex items-center">
           <p className="text-[#BCBCBC] paragraph font-normal">
-            © 2024 Perionica veša "Nice", M.sudani . All rights reserved.
+            © 2024 Perionica veša Nice, M.sudani . All rights reserved..
           </p>
         </div>
       </div>
