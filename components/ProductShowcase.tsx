@@ -156,57 +156,20 @@ const [isContactOpen, setIsContactOpen] = useState(false);
 
         </div>
         
-{isContactOpen && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
-    <div className="bg-white rounded-2xl shadow-xl p-6 max-w-lg w-[90%] text-center relative animate-fadeIn">
-      <h2 className="text-2xl font-bold text-[#08647d] mb-4">
-        Kontaktiraj nas
-      </h2>
-
-      <div className="text-gray-800 space-y-3 mb-6">
-
-        <p>
-          📞{" "}
-          <a
-            href="tel:+381641234567"
-            className="font-semibold text-[#08647d] hover:underline"
-          >
-            +381 64 123 4567
-          </a>
-        </p>
-
-        <p>
-          ✉️{" "}
-          <a
-            href="mailto:info@niceperionica.rs"
-            className="font-semibold text-[#08647d] hover:underline"
-          >
-            info@niceperionica.rs
-          </a>
-        </p>
-
-        <p>
-          📍{" "}
-          <a
-            href="https://www.google.com/maps?q=Beograd,+Obrenovac"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-[#08647d] hover:underline"
-          >
-            Beograd / Obrenovac
-          </a>
-        </p>
-      </div>
-
-      <button
-        onClick={() => setIsContactOpen(false)}
-        className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition"
-      >
-        Zatvori
-      </button>
-    </div>
-  </div>
-)}
+  {isContactOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-lg w-[90%] text-center relative animate-fadeIn">
+            <h2 className="text-2xl font-bold text-[#08647d] mb-4">Kontaktiraj nas</h2>
+            <div className="text-gray-800 space-y-3 mb-6">
+              <p>📞 <a className="font-semibold text-[#08647d]" href="tel:+38163211161">+38163211161</a></p>
+              <p>✉️ <a className="font-semibold text-[#08647d]" href="mailto:office@pranjeipeglanje.rs">office@pranjeipeglanje.rs</a></p>
+              <p>📍 <a className="font-semibold text-[#08647d] hover:underline" href="https://www.google.com/maps/place/Aleksandra+Ace+Simovića+11a,+Obrenovac,+Beograd" target="_blank" rel="noopener noreferrer">Aleksandra Ace Simovića 11a, 11500 Obrenovac, Beograd</a></p>
+              <p>⏰ Radno vreme: <span className="font-semibold">Ponedeljak – Petak: 08:00 – 15:00</span></p>
+            </div>
+            <button onClick={() => setIsContactOpen(false)} className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition">Zatvori</button>
+          </div>
+        </div>
+      )}
       </div>
     </section>
   );
