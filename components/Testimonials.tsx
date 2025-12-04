@@ -79,7 +79,7 @@ export default function Testimonials() {
                   </div>
 
                   {/* Tekst testimoniala */}
-                  <p className="text-[#010D3E] font-dmSans text-xl font-normal leading-tight">
+                  <p className="text-[#010D3E]  text-l  font-dmSans font-normal  leading-tight">
                     {item.text}
                   </p>
 

@@ -1,17 +1,29 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
 export const metadata: Metadata = {
-	title: "Perionica veša Nice",
-	description: "Profesionalno pranje i peglanje veša",
+  title: "Perionica veša Nice",
+  description: "Profesionalno pranje i peglanje veša",
 };
+
+// Google Inter (radi svuda - telefon, tablet, laptop)
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return (
-		<html lang="en">
-			<body>{children}</body>
-		</html>
-	);
+  return (
+    <html lang="sr">
+      <body className={inter.variable}>
+        {children}
+      </body>
+    </html>
+  );
 }

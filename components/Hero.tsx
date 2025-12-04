@@ -42,7 +42,7 @@ export default function Hero() {
       <Navbar />
 
       {/* HERO CONTENT */}
-      <div className="w-full h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 lg:px-0 relative z-10 font-bold">
+      <div className="w-full h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-6 lg:px-0 relative z-10 ">
         <div className="w-full lg:max-w-[900px] lg:ml-12">
           <h1 className="text-3xl lg:text-6xl sm:text-3xl font-[Inter] drop-shadow-lg text-white">
             Perionica veša &quot;Nice&quot;

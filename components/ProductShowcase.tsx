@@ -78,7 +78,7 @@ const [isContactOpen, setIsContactOpen] = useState(false);
   <motion.div style={{ y }} className="flex justify-center lg:justify-start">
           <div className="relative w-[550px] max-w-full">
             <Image
-              src="/images/IMG-20251127-new.jpg"
+              src="/images/Commercial Laundry Facility Interior.png"
               alt="Perionica cenovnik"
               width={550}
               height={550}

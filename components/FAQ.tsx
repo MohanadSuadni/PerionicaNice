@@ -83,7 +83,7 @@ export default function FAQRinseClean() {
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
                 className="w-full flex items-center justify-between text-left"
               >
-                <span className="text-lg font-semibold text-[#08647d] tracking-tight">
+                <span className="text-lg font-[Inter] text-[#08647d] tracking-tight">
                   {faq.question}
                 </span>
                 <motion.div

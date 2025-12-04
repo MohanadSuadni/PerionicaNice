@@ -75,7 +75,7 @@ export default function UslugainseClean() {
                     {step.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#08647d] text-base">{step.title}</h3>
+                    <h3 className="font-[Inter] text-[#08647d] text-base">{step.title}</h3>
                     <p className="mt-1 text-sm text-gray-600 max-w-xs">{step.text}</p>
                   </div>
                 </motion.div>
