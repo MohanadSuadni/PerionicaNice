@@ -21,6 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sr">
+		<meta name="title" content="Laundry Service - Perionica Nice" />
+<meta name="description" content="Profesionalno pranje, peglanje i dostava u Beogradu." />
+<meta name="keywords" content="pranje, peglanje, laundry, Beograd" />
       <body className={inter.variable}>
         {children}
       </body>

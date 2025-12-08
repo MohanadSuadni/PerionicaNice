@@ -60,21 +60,43 @@ export default function Navbar() {
       </div>
 
       {/* About Modal */}
-      {isAboutOpen && (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl shadow-xl p-6 max-w-lg w-[90%] text-center relative animate-fadeIn overflow-y-auto max-h-[80vh]">
-            <h2 className="text-2xl font-bold text-[#08647d] mb-4">O nama</h2>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              Perionica veša <span className="font-semibold">&quot;Nice&quot;</span> je lokalna firma iz Obrenovca koja već godinama pruža vrhunske usluge pranja i peglanja veša građanima Beograda i okoline.
-            </p>
-            <h3 className="text-xl font-semibold text-[#08647d] mt-4 mb-2">Naša misija</h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Verujemo da svaki komad veša zaslužuje pažnju i profesionalno rukovanje. Naša misija je da vam vratimo vreme koje biste potrošili na pranje i peglanje, omogućavajući vam da se fokusirate na važnije stvari u životu, dok mi brinemo o vašem vešu sa pažnjom koju zaslužuje.
-            </p>
-            <button onClick={() => setIsAboutOpen(false)} className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition">Zatvori</button>
-          </div>
-        </div>
-      )}
+    {isAboutOpen && (
+  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+    <div className="bg-white rounded-2xl shadow-xl p-6 max-w-lg w-[90%] text-center relative animate-fadeIn overflow-y-auto max-h-[80vh]">
+
+      <h2 className="text-2xl font-bold text-[#08647d] mb-4">O nama</h2>
+
+      <p className="text-gray-700 mb-4 leading-relaxed">
+        <span className="font-semibold">Maestro Cleaning</span> posluje od 2018. godine i nastao je iz želje da podignemo standard čistoće i brige o prostoru. Na početku smo se bavili održavanjem poslovnih objekata i stambenih jedinica, gde smo izgradili reputaciju pouzdanosti, preciznosti i poverenja.
+      </p>
+
+      <p className="text-gray-700 mb-4 leading-relaxed">
+        Kako su potrebe naših klijenata rasle, 2021. godine pokrenuli smo novu poslovnu granu — profesionalni veseraj. U okviru kompanije Maestro Cleaning otvorili smo novu radnu jedinicu <span className="font-semibold">„NICE“</span>, specijalizovanu za modernu, efikasnu i brzu uslugu pranja, sušenja i pakovanja veša.
+      </p>
+
+      <p className="text-gray-700 mb-4 leading-relaxed">
+       Danas je upravo ovaj segment naš glavni fokus. Posvećeni smo tome da korisnicima uštedimo vreme, olakšamo svakodnevicu i pružimo vrhunski kvalitet na koji mogu da se oslone.
+      </p>
+
+      <p className="text-gray-700 mb-4 leading-relaxed">
+        Maestro Cleaning – jer čistoća je stvar poverenja.
+      </p>
+
+
+      <p className="text-gray-700 leading-relaxed mb-6">
+        Naš cilj je da ženama vratimo najvredniji resurs — vreme. Želimo da im omogućimo da budu posvećene sebi, svojim željama i onome što im je zaista važno, uz sigurnost da uvek imaju pouzdanog partnera na kog mogu da se oslone.
+      </p>
+
+      <button
+        onClick={() => setIsAboutOpen(false)}
+        className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition"
+      >
+        Zatvori
+      </button>
+    </div>
+  </div>
+)}
+
 
       {/* Contact Modal */}
       {isContactOpen && (

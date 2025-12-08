@@ -44,7 +44,7 @@ export default function Testimonials() {
               repeat: Infinity,
               repeatType: "loop",
               ease: "linear",
-              duration: 13 + idx,
+              duration: 25 + idx,
             }}
           >
             {[...testimonials.slice(start, start + 3), ...testimonials.slice(start, start + 3)].map((item) => (

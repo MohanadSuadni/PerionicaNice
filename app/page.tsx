@@ -32,12 +32,10 @@ export default function App() {
 			<ProductShowcase />
 			<Usluga />
 			<Pricing />
-			
 			<FAQ />
 			<Testimonials />
 			<CTA />
-
-<MiniGalleryScroller /> 
+            <MiniGalleryScroller /> 
 			<Footer />
 
 		</>

@@ -8,6 +8,7 @@ import { ArrowRight, spring, star } from "@/public";
 import { Star, X } from "lucide-react";
 import emailjs from "@emailjs/browser"; 
 
+
 export default function CallToAction() {
   const [open, setOpen] = useState(false);
   const [rating, setRating] = useState(0);
@@ -128,17 +129,17 @@ export default function CallToAction() {
           flex items-center justify-center 
           w-9 h-9 sm:w-11 sm:h-11
           rounded-full 
-          bg-yellow-400/80
+          bg-[#08647d] 
           shrink-0
         "
       >
-        <Image
-          src={ArrowRight}
-          alt="Pošalji"
-          width={22}
-          height={18}
-          className="invert"
-        />
+  <Image
+  src={ArrowRight}
+  alt="Pošalji"
+  width={22}
+  height={18}
+  className="brightness-0 saturate-100 invert hue-rotate-20"
+ />
       </div>
     </div>
   </div>

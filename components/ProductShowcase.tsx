@@ -15,9 +15,9 @@ const [isContactOpen, setIsContactOpen] = useState(false);
   const cards = [
     {
       id: "express",
-      title: "Ekspres usluga",
-      text: "Brza i pouzdana usluga pranja i peglanja sa minimalnim rokom isporuke.",
-      icon: "/icons/schedule_3652221.png",
+      title: "Premium korisnici",
+      text: "Omogućavamo izbor praška i deterdženta po vašoj želji, kako biste dobili baš onaj miris i kvalitet koji volite...",
+      icon: "/icons/expertise.png",
     },
     {
       id: "eco",
@@ -105,7 +105,7 @@ const [isContactOpen, setIsContactOpen] = useState(false);
                   ${active === c.id ? "border-[#08647d] shadow-md" : "border-gray-300"}
                 `}
               >
-                <Image src={c.icon} alt={c.title} width={30} height={30} />
+                <Image src={c.icon} alt={c.title} width={35} height={35} />
                 <span className="mt-2 text-sm  text-[#08647d]   font-[Inter] lg:font-[Inter]">{c.title}</span>
               </button>
             ))}
