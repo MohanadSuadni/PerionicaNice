@@ -6,7 +6,8 @@ import { useRef, useState } from "react";
 import { Navbar } from "@/components";
 import { textAnimation } from "@/motion";
 import { ArrowRight } from "@/public";
-import { Phone } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+
 export default function Hero() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -68,33 +69,35 @@ export default function Hero() {
   viewport={{ once: true }}
 >
   {/* Dugme */}
-  <button
-  onClick={(e) => e.stopPropagation()}
-    className="relative flex items-center justify-between bg-white text-black border border-[#08647d] py-2 pl-3 pr-2 rounded-full drop-shadow-lg hover:bg-gray-100 transition min-w-[280px]"
-    aria-label="O nama i naša misija"
-  >
-    <div className="flex items-center gap-3 text-sm font-[Inter] text-[#08647d]">
-      <span>Kontaktiraj nas</span>
-     <span className="w-[1px] h-10 bg-gray-300" />
-           <span >Zakaži odmah</span>
+   <button
+      onClick={(e) => e.stopPropagation()}
+      className="relative flex items-center justify-between bg-white text-black border border-[#08647d] py-2 pl-3 pr-2 rounded-full shadow-md hover:bg-gray-100 transition-all min-w-[230px]"
+      aria-label="Kontaktiraj nas"
+    >
+      {/* Levi deo: tekst */}
+     <div className="flex items-center gap-4 text-m font-[Inter] text-[#08647d]">
+  <span className="ml-4">Kontaktiraj nas</span>
+        <span className="w-[1px] h-7 bg-gray-300 mr-3" />
 
-    </div>
+</div>
 
-   {/* KRUG: link koji zove telefonom */}
-<a
+      {/* Krug sa telefonom sa marginom i float animacijom */}
+     <a
   href="tel:+38163211161"
   onClick={(e) => e.stopPropagation()}
-  className="flex items-center justify-center w-11 h-11 rounded-full bg-[#08647d] shadow-md"
+  className="flex items-center justify-center w-10 h-10 rounded-full bg-[#08647d] shadow-md hover:bg-[#07566b] transition-all mr-6 animate-float-horizontal"
   aria-label="Pozovi nas"
   title="Pozovi nas"
 >
-  <Phone
-    className="w-6 h-6 text-yellow-400/90 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(0,150,255,0.9)] "
-  />
+  <Phone className="w-6 h-6 text-yellow-400/80 transition-transform duration-200 hover:scale-110" />
 </a>
 
+    </button>
 
-  </button>
+
+
+
+
 
 
             {/* ⭐ REVIEW SEKCIJA —  */}

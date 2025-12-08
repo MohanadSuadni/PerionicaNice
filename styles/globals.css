@@ -34,4 +34,11 @@ body::-webkit-scrollbar {
 }
 
 
+@keyframes float-horizontal {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(29px); } /*  pomera */
+}
 
+.animate-float-horizontal {
+  animation: float-horizontal 3s ease-in-out infinite;
+}
