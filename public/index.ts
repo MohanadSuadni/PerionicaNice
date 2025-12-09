@@ -25,7 +25,7 @@ export { default as linkedin } from './social-linkedin.svg';
 export { default as pin } from './social-pin.svg';
 export { default as x } from './social-x.svg';
 export { default as youtube } from './social-youtube.svg';
-export { default as spring } from './OIP-removebg-preview.png';
+export { default as spring } from './laundry-basket-with-cloths-washing-isolated-background_893847-18427-removebg-preview.png';
 export { default as star } from './OIP-removebg-preview.png';
 export { default as productImage } from './product-image.png';
 export { default as pyramid } from './pyramid.png';
