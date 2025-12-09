@@ -36,7 +36,16 @@ export const navigationItems = [
 /**
  * Footer navigacija
  */
-export const footerItems = [...navigationItems];
+export const footerItems = [
+
+  { id: 2, title: "Usluga", href: "#USLUGE" },
+  { id: 3, title: "Cenovnik", href: "#CN" },
+  { id: 4, title: "FAQ", href: "#FAQ" },
+  { id: 5, title: "Naši klijenti", href: "#RV" },
+
+
+
+];
 
 /**
  * Footer društvene mreže

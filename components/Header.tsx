@@ -75,13 +75,14 @@ export default function Navbar() {
       </p>
 
       <p className="text-gray-700 mb-4 leading-relaxed">
-       Danas je upravo ovaj segment naš glavni fokus. Posvećeni smo tome da korisnicima uštedimo vreme, olakšamo svakodnevicu i pružimo vrhunski kvalitet na koji mogu da se oslone.
+        Danas je upravo ovaj segment naš glavni fokus. Naša misija je da korisnicima uštedimo vreme, olakšamo svakodnevicu i pružimo vrhunski kvalitet usluge na koji mogu da se oslone.
       </p>
 
       <p className="text-gray-700 mb-4 leading-relaxed">
         Maestro Cleaning – jer čistoća je stvar poverenja.
       </p>
 
+      <h3 className="text-xl font-semibold text-[#08647d] mt-4 mb-2">Naša vizija</h3>
 
       <p className="text-gray-700 leading-relaxed mb-6">
         Naš cilj je da ženama vratimo najvredniji resurs — vreme. Želimo da im omogućimo da budu posvećene sebi, svojim željama i onome što im je zaista važno, uz sigurnost da uvek imaju pouzdanog partnera na kog mogu da se oslone.
@@ -97,7 +98,6 @@ export default function Navbar() {
   </div>
 )}
 
-
       {/* Contact Modal */}
       {isContactOpen && (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
@@ -109,6 +109,17 @@ export default function Navbar() {
               <p>📍 <a className="font-semibold text-[#08647d] hover:underline" href="https://www.google.com/maps/place/Aleksandra+Ace+Simovića+11a,+Obrenovac,+Beograd" target="_blank" rel="noopener noreferrer">Aleksandra Ace Simovića 11a, 11500 Obrenovac, Beograd</a></p>
               <p>⏰ Radno vreme: <span className="font-semibold">Ponedeljak – Petak: 08:00 – 15:00</span></p>
             </div>
+            <div className="w-full h-64 my-4">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.123456789!2d20.0!3d44.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAleksandra%20Ace%20Simovića%2011a%2C%20Obrenovac%2C%20Beograd!5e0!3m2!1sen!2srs!4v1234567890"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
             <button onClick={() => setIsContactOpen(false)} className="bg-[#08647d] text-white px-6 py-2 rounded-md hover:bg-[#064c5d] transition">Zatvori</button>
           </div>
         </div>
