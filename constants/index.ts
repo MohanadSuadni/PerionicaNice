@@ -77,12 +77,12 @@ export const testimonials = [
   { id: 1, text: "Visok kvalitet pranja uz brzu uslugu i tačnu isporuku...", src: avatar9, name: "zona__wedding_salon", username: "@vencanice zona obrenova" },
   { id: 2, text: "Vrlo kvalitetan i pokazuje veliku posvećenost.  i pažnju prema detaljima, što ovaj rad čini izuzetnim....", src: avatar1, name: "Mohannad", username: "@mohanedf308" },
   { id: 3, text: "Prezadovoljan! Sve je oprano perfektno, bez čekanja i bez greške...", src: avatar2, name: " Event Hall", username: "@prostorizavencanja" },
-  { id: 4, text: "This app has completely transformed...", src: avatar3, name: "Ana.s", username: "@Ana.s1993" },
-  { id: 5, text: "I was amazed at how quickly...", src: avatar4, name: "Marina1775", username: "@Marina1775" },
-  { id: 6, text: "Planning and executing events...", src: avatar5, name: "Taylor Kim", username: "@taylorkimm" },
-  { id: 7, text: "The customizability and integration...", src: avatar6, name: "Riley Smith", username: "@rileysmith1" },
-  { id: 8, text: "Adopting this app for our team...", src: avatar7, name: "Jordan Patels", username: "@jpatelsdesign" },
-  { id: 9, text: "With this app, we can easily assign...", src: avatar8, name: "Sam Dawson", username: "@dawsontechtips" },
+  { id: 4, text: "brzu uslugu i tačnu isporuku ...", src: avatar3, name: "Ana.s", username: "@Ana.s1993" },
+  { id: 5, text: "Odlična i Kvalitetna usluga  Moja Preporuka...", src: avatar4, name: "Marina1775", username: "@Marina1775" },
+  { id: 6, text: "Odlična i Kvalitetna usluga.Vrlo ljubazno osoblje.Moja Preporuka...", src: avatar5, name: "Stefan58", username: "@bojicicnevena58 " },
+  { id: 7, text: "Kvalitetna usluga...", src: avatar6, name: "Riley Smith", username: "@rileysmith1" },
+  { id: 8, text: "Vrlo kvalitetan...", src: avatar7, name: "Jordan Patels", username: "@jpatelsdesign" },
+  { id: 9, text: "bez greške...", src: avatar8, name: "Sam Dawson", username: "@dawsontechtips" },
 ];
 
 /**
