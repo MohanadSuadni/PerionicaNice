@@ -41,7 +41,7 @@ export default function CallToAction() {
     // emailjs.send(serviceID, templateID, templateParams, publicKey)
     emailjs
       .send(
-        "service_903asb8",
+        "service_35ipyrs",
         "template_0vavn2n",
         templateParams,
         "jJT0oY9CFoSG9LRvj"
