@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="sr">
 		<meta name="title" content="Laundry Service - Perionica Nice" />
 <meta name="description" content="Profesionalno pranje, peglanje i dostava u Beogradu." />
-<meta name="keywords" content="pranje, peglanje, laundry, Beograd" />
+<meta name="keywords" content="pranje, peglanje, laundry, Beograd Perionica veša Surčin Novi Beograd Obrenovac ,Preuzimanje I dostava" />
       <body className={inter.variable}>
         {children}
       </body>
