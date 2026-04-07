@@ -51,7 +51,7 @@ export default function Hero() {
 
           <h2 className="text-2xl lg:text-5xl sm:text-2xl font-[Inter] drop-shadow-lg text-white">
             <span className="text-yellow-400/80">Novi Beograd</span>{" "}
-            <span className="text-yellow-400/80">I </span>{" "}
+            <span className="text-yellow-400/80">Surčin</span>{" "}
             <span className="text-yellow-400/80">Obrenovac</span>
           </h2>
 
