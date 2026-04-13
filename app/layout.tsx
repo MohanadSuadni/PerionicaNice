@@ -3,11 +3,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Perionica veša Nice",
-  description: "Profesionalno pranje i peglanje veša",
+  title: "Perionica veša Surčin | Pranje i peglanje Beograd - Nice",
+  description:
+    "Profesionalna perionica veša u Surčinu. Pranje, peglanje i dostava u Novom Beogradu i Obrenovcu.",
+  keywords: [
+    "perionica veša Surčin",
+    "pranje veša Beograd",
+    "peglanje veša",
+    "Novi Beograd",
+    "Obrenovac"
+  ],
 };
 
-// Google Inter (radi svuda - telefon, tablet, laptop)
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -21,9 +28,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="sr">
-		<meta name="title" content="Laundry Service - Perionica Nice" />
-<meta name="description" content="Profesionalno pranje, peglanje i dostava u Beogradu." />
-<meta name="keywords" content="pranje, peglanje, laundry, Beograd Perionica veša Surčin Novi Beograd Obrenovac ,Preuzimanje I dostava" />
       <body className={inter.variable}>
         {children}
       </body>
