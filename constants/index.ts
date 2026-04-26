@@ -25,12 +25,13 @@ import {
  * Navigacija
  */
 export const navigationItems = [
-  { id: 1, title: "O nama", href: "/#Onama" },
-  { id: 2, title: "Usluga", href: "#USLUGE" },
-  { id: 3, title: "Cenovnik", href: "#CN" },
-  { id: 4, title: "FAQ", href: "#FAQ" },
-  { id: 5, title: "Naši klijenti", href: "#RV" },
-  { id: 6, title: "Kontakt", href: "#Kontakt" },
+   { id: 0, title: "Početna", href: "/" },
+{ id: 1, title: "O nama", href: "/#Onama" },
+{ id: 2, title: "Usluge", href: "/usluge#USLUGE" },
+{ id: 3, title: "Cenovnik", href: "/pricing#CN" },
+{ id: 4, title: "FAQ", href: "/faq#FAQ" },
+{ id: 5, title: "Naši klijenti", href: "/#RV" },
+{ id: 6, title: "Kontakt", href: "/#Kontakt" },
 ];
 
 /**
@@ -38,10 +39,10 @@ export const navigationItems = [
  */
 export const footerItems = [
 
-  { id: 2, title: "Usluga", href: "#USLUGE" },
-  { id: 3, title: "Cenovnik", href: "#CN" },
-  { id: 4, title: "FAQ", href: "#FAQ" },
-  { id: 5, title: "Naši klijenti", href: "#RV" },
+  { id: 2, title: "Usluge", href: "/usluge#USLUGE" },
+  { id: 3, title: "Cenovnik", href: "/pricing#CN" },
+  { id: 4, title: "FAQ", href: "/faq#FAQ" },
+  { id: 5, title: "Naši klijenti", href: "/#RV" },
 
 
 
@@ -51,7 +52,7 @@ export const footerItems = [
  * Footer društvene mreže
  */
 export const footerSocialsItems = [
-  { id: 1, src: instagram, href: "/" },
+  { id: 1, src: instagram, href: "https://www.instagram.com/nice_pranje_peglanje/" },
   { id: 2, src: linkedin, href: "/" },
   { id: 3, src: pin, href: "/" },
   { id: 4, src: x, href: "/" },
