@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { LangProvider } from "@/context/LangContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,15 +13,15 @@ export const metadata: Metadata = {
   title: "Perionica veša Surčin | Pranje i peglanje Beograd - Nice",
   description:
     "Profesionalna perionica veša u Surčinu. Pranje, peglanje i dostava u Novom Beogradu i Obrenovcu.",
- keywords: [
-  "perionica veša Surčin",
-  "pranje veša Beograd",
-  "peglanje veša",
-  "hemijsko pranje veša",
-  "dry cleaning Beograd",
-  "Novi Beograd",
-  "Obrenovac"
-],
+  keywords: [
+    "perionica veša Surčin",
+    "pranje veša Beograd",
+    "peglanje veša",
+    "hemijsko pranje veša",
+    "dry cleaning Beograd",
+    "Novi Beograd",
+    "Obrenovac"
+  ],
   openGraph: {
     title: "Perionica veša Nice | Surčin",
     description:
@@ -37,22 +38,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Nice Perionica",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Surčin",
-    "addressCountry": "RS"
-  },
-  "areaServed": [
-    "Surčin",
-    "Novi Beograd",
-    "Obrenovac"
-  ],
-  "serviceType": "Pranje i peglanje veša"
-};
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Nice Perionica",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Surčin",
+      addressCountry: "RS"
+    },
+    areaServed: [
+      "Surčin",
+      "Novi Beograd",
+      "Obrenovac"
+    ],
+    serviceType: "Pranje i peglanje veša"
+  };
 
   return (
     <html lang="sr">
@@ -66,7 +67,9 @@ const schema = {
       </head>
 
       <body className={inter.variable}>
-        {children}
+        <LangProvider>
+          {children}
+        </LangProvider>
       </body>
     </html>
   );

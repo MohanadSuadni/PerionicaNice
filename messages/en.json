@@ -1,0 +1,197 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "services": "Services",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "clients": "Clients",
+    "contact": "Contact",
+    "login": "Log in"
+  },
+
+  "hero": {
+    "title": "NICE Laundry Service",
+    "subtitle": "Pickup & Delivery",
+    "contact": "Contact us",
+    "reviews": "500+ reviews"
+  },
+
+  "common": {
+    "close": "Close"
+  },
+
+  "about": {
+    "title": "About us",
+    "p1": "has been operating since 2018 with the goal of raising cleaning standards.",
+    "p2": "In 2021 we launched a laundry service ‘NICE’ focused on speed and quality.",
+    "p3": "Today this is our main focus and we deliver premium service.",
+    "vision": "is built on trust.",
+    "extra": "Our goal is to give people back their most valuable resource — time."
+  },
+
+  "contact": {
+    "title": "Get in touch",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Location",
+    "hours": "Working hours"
+  },
+
+  "productShowcase": {
+    "title": "Washing & ironing",
+    "desc": "Our commitment to quality, ecology, and the local community makes us the best choice for your laundry and ironing needs.",
+
+    "express": {
+      "title": "Premium users",
+      "text": "We offer the choice of powder and detergent according to your wishes."
+    },
+
+    "premium": {
+      "title": "Premium service",
+      "text": "Fast, reliable and tailored to your needs."
+    },
+
+    "eco": {
+      "title": "Eco-friendly detergents",
+      "text": "We use only safe, eco-friendly detergents."
+    },
+
+    "equipment": {
+      "title": "Professional equipment",
+      "text": "The latest industrial machines guarantee top quality."
+    }
+  },
+
+  "usluga": {
+    "heading": "How our service works",
+    "description": "We pick up your laundry, wash, dry and return it directly to your door.",
+
+    "title": "Washing",
+    "pranjeText": "Professional industrial machines and correct temperature for every fabric.",
+
+    "susenje": "Drying",
+    "susenjeText": "Temperature control and protection of materials.",
+
+    "peglanje": "Ironing",
+    "peglanjeText": "Neat and wrinkle-free.",
+
+    "dostava": "Pickup & delivery",
+    "dostavaText": "Delivery depends on location."
+  },
+
+  "pricing": {
+    "title": "Pricing",
+    "button": "View full price list",
+      "items": [
+    {
+      "icon": "/icons/laundry-service (1).png",
+      "name": "Wash & dry (1 machine up to 5kg)",
+      "price": "1090 RSD"
+    },
+    {
+      "icon": "/icons/dry.png",
+      "name": "Wash & dry over 6kg",
+      "price": "200 RSD/kg"
+    },
+    {
+      "icon": "/icons/iron.png",
+      "name": "Ironing",
+      "price": "320 RSD/kg"
+    },
+    {
+      "icon": "/icons/laundry-service.png",
+      "name": "Wash & ironing",
+      "price": "460 RSD/kg"
+    },
+    {
+      "icon": "/icons/shirt (1).png",
+      "name": "Shirts wash & ironing",
+      "price": "400 RSD/item"
+    },
+    {
+      "icon": "/icons/work.png",
+      "name": "Shirts ironing only",
+      "price": "300 RSD/item"
+    },
+    {
+      "icon": "/icons/skirt.png",
+      "name": "Formal skirts",
+      "price": "By agreement"
+    },
+    {
+      "icon": "/icons/sleep.png",
+      "name": "Duvets, blankets, covers",
+      "price": "500 RSD/kg"
+    },
+    {
+      "icon": "/icons/windows.png",
+      "name": "Curtains & drapes",
+      "price": "500 RSD/kg"
+    },
+    {
+      "icon": "/icons/curtains.png",
+      "name": "Tulle curtains / special fabrics",
+      "price": "1000 RSD/item"
+    },
+    {
+      "icon": "/icons/dress.png",
+      "name": "Hanging after washing",
+      "price": "1000 RSD per rail"
+    },
+    {
+      "icon": "/icons/wedding.png",
+      "name": "Wedding dresses & delicate items",
+      "price": "By agreement"
+    },
+    {
+      "icon": "/icons/laundry-service.png",
+      "name": "Winter jackets",
+      "price": "1500–2000 RSD/item"
+    },
+    {
+      "icon": "/icons/jersey.png",
+      "name": "Wool items",
+      "price": "400 RSD/kg"
+    }
+  ]
+  },
+  "faq": [
+  {
+    "question": "Do you mix laundry with other clients' clothes?",
+    "answer": "No — every customer has a separate washing cycle. Our capacity is designed for individual orders, and clothes are never mixed or in contact with other clients' laundry."
+  },
+  {
+    "question": "Is there an option for special requests?",
+    "answer": "Yes — especially for our premium customers. You can choose detergent and fabric softener, delivery time, as well as additional personalized requests to fully adapt the service to your needs."
+  },
+  {
+    "question": "How is washing quality ensured?",
+    "answer": "We use professional industrial machines and dedicated programs for each type of fabric. Every item is treated carefully to preserve its quality, shape, and long-lasting durability."
+  },
+  {
+    "question": "Do you offer delivery?",
+    "answer": "Yes, we offer pickup and delivery service. In New Belgrade there is a minimum of 1300 RSD with free delivery, while in Obrenovac delivery is completely free without restrictions."
+  },
+  {
+    "question": "Do you handle delicate items?",
+    "answer": "Yes, we also work with delicate and sensitive fabrics. We use special programs and extra care to ensure the material stays fully protected without damage."
+  }
+],
+
+
+"testimonials": {
+    "heading": "What our clients say",
+    "label": "Our clients",
+    "description": "Hear what our satisfied customers have to say about their experience with Perionica Nice."
+
+},
+
+"cta": {
+    "review": "Precision, cleanliness, and dedication in every wash make Perionica Nice the first choice for those who want quality without compromise.",
+    "phare1": "Our clients' impressions",
+    "phare2": "Our clients are our greatest inspiration. Their words of praise and satisfaction are a testament to our dedication and quality of service. Read their impressions and find out why Perionica Nice is the first choice for laundry services.",
+    "phare3": "Precision, cleanliness, and dedication in every wash make Perionica Nice the first choice for those who want quality without compromise."
+
+}
+}

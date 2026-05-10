@@ -7,7 +7,8 @@ import { Heading } from "@/components";
 import { ArrowRight, spring, star } from "@/public";
 import { Star, X } from "lucide-react";
 import emailjs from "@emailjs/browser"; 
-
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 
 export default function CallToAction() {
   const [open, setOpen] = useState(false);
@@ -16,14 +17,15 @@ export default function CallToAction() {
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
 
-  const phares1 = ["Utisci naših klijenata"];
+  const { lang } = useLang();
+  const t = getDict(lang);
+  const phares1 = [t.cta?.phare1 || "Utisci naših klijenata"];
   const phares2 = [
-    "Preciznost, čistoća i posvećenost u svakom pranju",
-    "Perionica Nice je prvi izbor za one koji žele kvalitet",
-    "bez kompromisa.",
+    t.cta?.phare2 ||
+      "Naši klijenti su naša najveća inspiracija. Njihove reči hvale i zadovoljstva su dokaz naše posvećenosti i kvaliteta usluge. Pročitajte njihove utiske i saznajte zašto je Perionica Nice prvi izbor za pranje automobila.",
   ];
   const phares3 = [
-    "Preciznost, čistoća i posvećenost u svakom pranju Perionica Nice je prvi izbor za one koji žele kvalitet bez kompromisa.",
+    t.cta?.phare3 || "Preciznost, čistoća i posvećenost u svakom pranju Perionica Nice je prvi izbor za one koji žele kvalitet bez kompromisa.",
   ];
 
   const sendReview = () => {

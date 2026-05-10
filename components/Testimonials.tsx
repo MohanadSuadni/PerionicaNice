@@ -4,9 +4,13 @@ import { Heading } from "@/components";
 import { motion } from "framer-motion";
 import { textAnimation } from "@/motion";
 import { testimonials } from "@/constants";
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 
 export default function Testimonials() {
-  const phares = ["Šta naši klijenti kažu"];
+    const { lang } = useLang();
+const dict = getDict(lang);
+  const phares = [dict.testimonials.heading];
   const phares1 = [
     "„Briga o vašem vešu sa preciznošću i posvećenošću,",
     "perionica Nice je izbor klijenata koji cene kvalitet i pouzdanost.“",
@@ -26,11 +30,38 @@ export default function Testimonials() {
             whileInView="enter"
             viewport={{ once: true }}
           >
-            Naši klijenti
+            {dict.testimonials.label}
           </motion.button>
         </div>
-        <Heading classname="heading  font-[Inter] lg:font-[Inter] xm:text-center sm:text-center text-[#08647d] xm:text-center sm:text-center" title={phares} />
-        <Heading classname="paragraph text-center font-normal xm:text-center sm:text-center" title={phares1} />
+       <div className="flex flex-col items-center text-center gap-4 px-4 md:px-8">
+  
+  <Heading
+    classname="
+      text-3xl
+      sm:text-4xl
+      lg:text-5xl
+font-dmSans
+      font-[Inter]
+      text-[#08647d]
+      leading-tight
+    "
+    title={phares}
+  />
+
+  <Heading
+    classname="
+      text-base
+      sm:text-lg
+      lg:text-xl
+      text-gray-600
+      font-normal
+      max-w-3xl
+      leading-relaxed
+    "
+    title={[dict.testimonials.description]}
+  />
+
+</div>
       </div>
 
       {/* Testimonials */}

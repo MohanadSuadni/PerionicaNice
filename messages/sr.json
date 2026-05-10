@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "home": "Početna",
+    "about": "O nama",
+    "services": "Usluge",
+    "pricing": "Cenovnik",
+    "faq": "FAQ",
+    "clients": "Naši klijenti",
+    "contact": "Kontakt",
+    "login": "Uloguj se"
+  },
+
+  "hero": {
+    "title": "Perionica veša NICE",
+    "subtitle": "Preuzimanje i dostava",
+    "contact": "Kontaktiraj nas",
+    "reviews": "500+ recenzija"
+  },
+
+  "common": {
+    "close": "Zatvori"
+  },
+
+"about": {
+  "title": "O nama",
+  "p1": "posluje od 2018. godine i nastao je iz želje da podignemo standard čistoće i brige o prostoru. Na početku smo se bavili održavanjem poslovnih objekata i stambenih jedinica, gde smo izgradili reputaciju pouzdanosti, preciznosti i poverenja.",
+  "p2": "Kako su potrebe naših klijenata rasle, 2021. godine pokrenuli smo novu poslovnu granu — profesionalni veseraj. U okviru kompanije Maestro Cleaning otvorili smo radnu jedinicu „NICE“, specijalizovanu za pranje, sušenje i pakovanje veša.",
+  "p3": "Danas je ovaj segment naš glavni fokus i posvećeni smo vrhunskom kvalitetu usluge.",
+  "vision": "je stvar poverenja.",
+  "extra": "Naš cilj je da ženama vratimo najvredniji resurs — vreme. Želimo da im omogućimo da budu posvećene sebi i onome što im je zaista važno."
+},
+
+  "contact": {
+    "title": "Kontaktiraj nas",
+    "phone": "Telefon",
+    "email": "Email",
+    "location": "Lokacija",
+    "hours": "Radno vreme"
+  },
+
+
+"productShowcase": {
+  "title": "Pranje i peglanje",
+  "desc": "Naša posvećenost kvalitetu, ekologiji i lokalnoj zajednici čini nas najboljim izborom za vaše potrebe pranja i peglanja veša.",
+
+  "express": {
+    "title": "Premium korisnici",
+    "text": "Omogućavamo izbor praška i deterdženta po vašoj želji, kako biste dobili baš onaj miris i kvalitet koji volite..."
+  },
+   "premium": {
+    "title": "Premium usluga",
+    "text": "Brzo, pouzdano i prilagođeno vašim potrebama."
+  },
+  "eco": {
+    "title": "Ekološki deterdženti",
+    "text": "Koristimo samo bezbedne, ekološke deterdžente koji čuvaju tkanine i prirodu."
+  },
+  "equipment": {
+    "title": "Profesionalna oprema",
+    "text": "Najmodernije industrijske mašine garantuju najviši kvalitet usluge."
+  }
+},
+
+"usluga": {
+  "heading": "Kako funkcioniše naša usluga",
+  "description": "Preuzimamo vaš veš, peremo, sušimo i vraćamo direktno na vaša vrata.",
+
+  "title": "Pranje",
+  "pranjeText": "Profesionalne industrijske mašine, posebne ture, pravilna temperatura i sredstva za svaku vrstu tkanine.",
+
+  "susenje": "Sušenje",
+  "susenjeText": "Kontrola temperature, zaštita delikatnih materijala i higijenski uslovi bez prašine i vlage.",
+
+  "peglanje": "Peglanje",
+  "peglanjeText": "Ravno, uredno, bez pregorevanja, sa parnim stanicama visokog pritiska.",
+
+  "dostava": "Preuzimanje i dostava",
+  "dostavaText": "Dostava za fizička lica — Novi Beograd (minimum 1300 RSD, besplatna dostava). Obrenovac — bez ograničenja i besplatna dostava."
+},
+
+
+"pricing": {
+  "title": "Cenovnik",
+  "button": "Pogledaj ceo cenovnik",
+  "items": [
+    {
+      "icon": "/icons/laundry-service (1).png",
+      "name": "Pranje i sušenje 1 mašina do 5kg veša",
+      "price": "1090 RSD"
+    },
+    {
+      "icon": "/icons/dry.png",
+      "name": "Pranje i sušenje preko 6kg",
+      "price": "200 RSD/kg"
+    },
+    {
+      "icon": "/icons/iron.png",
+      "name": "Peglanje",
+      "price": "320 RSD/kg"
+    },
+    {
+      "icon": "/icons/laundry-service.png",
+      "name": "Pranje i peglanje",
+      "price": "460 RSD/kg"
+    },
+    {
+      "icon": "/icons/shirt (1).png",
+      "name": "Košulje pranje i peglanje",
+      "price": "400 RSD/kom"
+    },
+    {
+      "icon": "/icons/work.png",
+      "name": "Košulje samo peglanje",
+      "price": "300 RSD/kom"
+    },
+    {
+      "icon": "/icons/skirt.png",
+      "name": "Suknje svečane",
+      "price": "Po dogovoru"
+    },
+    {
+      "icon": "/icons/sleep.png",
+      "name": "Pranje jorgana, ćebadi, presvlaka za jorgane",
+      "price": "500 RSD/kg"
+    },
+    {
+      "icon": "/icons/windows.png",
+      "name": "Zavese draperije",
+      "price": "500 RSD/kg"
+    },
+    {
+      "icon": "/icons/curtains.png",
+      "name": "Zavese til, markiza ili drugi oblik konca",
+      "price": "1000 RSD/kom"
+    },
+    {
+      "icon": "/icons/dress.png",
+      "name": "Kačenje posle pranja",
+      "price": "1000 RSD po garnisli"
+    },
+    {
+      "icon": "/icons/wedding.png",
+      "name": "Venčanice i ostale delikatne stvari",
+      "price": "Po dogovoru"
+    },
+    {
+      "icon": "/icons/laundry-service.png",
+      "name": "Zimske jakne",
+      "price": "1500–2000 RSD/kom"
+    },
+    {
+      "icon": "/icons/jersey.png",
+      "name": "Sve od vune",
+      "price": "400 RSD/kg"
+    }
+  ]
+},
+
+"faq": [
+  {
+    "question": "Da li mešate veš sa vešom drugih klijenata?",
+    "answer": "Ne — svaki korisnik dobija svoj zaseban ciklus pranja. Naši kapaciteti su prilagođeni manjim porudžbinama, a veš se nikada ne meša niti dolazi u kontakt sa vešom drugih klijenata."
+  },
+  {
+    "question": "Da li postoji opcija za posebne želje?",
+    "answer": "Da, postoji — posebno za naše premium korisnike. Možete birati deterdžent i omekšivač po želji, vreme dostave, kao i dodatne personalizovane zahteve kako bi usluga bila potpuno prilagođena vama."
+  },
+  {
+    "question": "Kako se obezbeđuje kvalitet pranja?",
+    "answer": "Koristimo profesionalne industrijske mašine i odgovarajuće programe za svaku vrstu tkanine. Svaki komad veša se tretira pažljivo kako bi se očuvao kvalitet, oblik i dugotrajnost materijala."
+  },
+  {
+    "question": "Da li nudite dostavu?",
+    "answer": "Da, nudimo uslugu preuzimanja i dostave. Na teritoriji Novog Beograda važi minimum 1300 RSD uz besplatnu dostavu, dok je u Obrenovcu dostava potpuno besplatna bez ograničenja."
+  },
+  {
+    "question": "Da li radite sa osetljivim stvarima?",
+    "answer": "Da, radimo i sa delikatnim i osetljivim materijalima. Za takve stvari koristimo posebne programe i dodatnu pažnju kako bi tkanina ostala potpuno očuvana i bez oštećenja."
+  }
+],
+
+"testimonials": {
+    "heading": "Šta naši klijenti kažu",
+   "description": "„Briga o vašem vešu sa preciznošću i posvećenošću, perionica Nice je izbor klijenata koji cene kvalitet i pouzdanost.“",
+    "label": "Naši klijenti"
+
+},
+
+"cta":{
+    "review": "Preciznost, čistoća i posvećenost u svakom pranju čine Perionica Nice prvim izborom za one koji žele kvalitet bez kompromisa.",
+    "phare1": "Utisci naših klijenata",
+    "phare2": "Naši klijenti su naša najveća inspiracija. Njihove reči hvale i zadovoljstva su dokaz naše posvećenosti i kvaliteta usluge. Pročitajte njihove utiske i saznajte zašto je Perionica Nice prvi izbor za pranje veša.",
+    "phare3": "Preciznost, čistoća i posvećenost u svakom pranju čine Perionica Nice prvim izborom za one koji žele kvalitet bez kompromisa."
+}
+
+}
+
+
+
+
+

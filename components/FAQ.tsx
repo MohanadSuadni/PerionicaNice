@@ -4,113 +4,116 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { textAnimation } from "@/motion";
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
+import { FAQItem } from "@/types/dict";
 
 export default function FAQRinseClean() {
-  const faqs = [
-    {
-      id: 1,
-      question: "Da li postoji opcija pranja bez mirisa, za osetljivu kožu?",
-      answer:
-        "Naravno. Ako želite potpuno nežan pristup pranju, samo napomenite našem vozaču „bez mirisa“ prilikom preuzimanja. " +
-        "Koristimo deterdžente bez parfema, pogodne za osetljivu kožu, bebe i osobe sklone alergijama.",
-    },
-    {
-      id: 2,
-      question: "Može li se veš izgubiti?",
-      answer:
-        "Ne brinite — vaš veš je kod nas potpuno bezbedan. " +
-        "Svaka porudžbina se označi odmah pri preuzimanju, a ista oznaka prati veš kroz ceo proces sve do trenutka kada ga vraćamo nazad u vaše ruke. " +
-        "Mi ne gubimo veš — mi ga pažljivo peremo i čuvamo.",
-    },
-    {
-      id: 3,
-      question: "Da li mogu da se skinu fleke?",
-      answer:
-        "Mnoge fleke mogu biti uklonjene, ali nam je potrebna mala pomoć s vaše strane:\n" +
-        "I. Pošaljite veš što je brže moguće, dok se fleka ne “zapeče”.\n" +
-        "II. Odvojite komade sa flekama od ostatka veša.\n" +
-        "III. Obeležite ih i, ako možete, napišite od čega je fleka — to nam mnogo pomaže.\n" +
-        "Naš tim zatim bira odgovarajući tretman, kako bi tkanina ostala zaštićena, a rezultat maksimalan.",
-    },
-    {
-      id: 4,
-      question: "Da li mešate veš sa vešom drugih klijenata?",
-      answer:
-        "Ne — svaki korisnik dobija svoj zaseban ciklus pranja. " +
-        "Naši kapaciteti su baš zato prilagođeni manjim porudžbinama. " +
-        "U vešeraju su odvojeni putevi „čistog“ i „prljavog“, tako da se veš nikada ne dodiruje niti ukršta sa tuđim.",
-    },
-    {
-      id: 5,
-      question: "Da li postoji opcija za posebne želje?",
-      answer:
-        "Da, postoji — posebno za naše premium korisnike. " +
-        "Možete birati:\n" +
-        "• omekšivač i prašak po svojoj želji\n" +
-        "• tačno vreme dostave\n" +
-        "• posebno slaganje veša\n" +
-        "• dodatne personalizovane zahteve\n" +
-        "Naš cilj je da se osećate zbrinuto i rasterećeno, kao da imate lično osoblje u kući.",
-    },
-  ];
+  const { lang } = useLang();
+  const dict = getDict(lang);
+
+  const faqs: FAQItem[] = dict.faq;
 
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <section id="FAQ" className="w-full px-6 py-20 bg-gradient-to-b from-[#f9fafb] to-[#eceff1]">
+    <section className="w-full px-6 py-20 bg-gradient-to-b from-[#f9fafb] to-[#eceff1]">
       <div className="max-w-6xl mx-auto flex flex-col gap-8">
-        {/* Header */}
+
         <motion.div
           className="flex flex-col items-center gap-4"
           variants={textAnimation}
           initial="initial"
           whileInView="enter"
-          viewport={{ once: true }}
         >
-          <button className="w-fit py-2 px-4 rounded-full border border-[#2222221A] text-black font-dmSans text-sm font-medium">
-            FAQ
-          </button>
-          <h2 className="text-4xl sm:text-5xl text-[#08647d] font-[Inter] text-center">
-            Najčešća pitanja
-          </h2>
+          <h2 className="text-4xl text-[#08647d]">FAQ</h2>
         </motion.div>
 
-        {/* FAQ list */}
-        <div className="divide-y divide-gray-200 bg-white border border-gray-300 shadow-sm rounded-2xl overflow-hidden">
-          {faqs.map((faq) => (
-            <div key={faq.id} className="p-6">
-              <button
-                onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
-                className="w-full flex items-center justify-between text-left"
-              >
-                <span className="text-lg font-[Inter] text-[#08647d] tracking-tight">
-                  {faq.question}
-                </span>
-                <motion.div
-                  animate={{ rotate: openId === faq.id ? 180 : 0 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  <ChevronDown size={22} className="text-gray-500" />
-                </motion.div>
-              </button>
+      <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
 
-              <AnimatePresence>
-                {openId === faq.id && (
-                  <motion.div
-                    key="content"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="mt-4 text-gray-700 leading-relaxed whitespace-pre-line"
-                  >
-                    {faq.answer}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
-        </div>
+  {faqs.map((faq, i) => {
+    const isOpen = openId === i;
+
+    return (
+      <div
+        key={i}
+        className="border-b border-gray-100 last:border-none"
+      >
+        <button
+          onClick={() => setOpenId(isOpen ? null : i)}
+          className="
+            w-full
+            flex
+            items-center
+            justify-between
+            gap-4
+            px-6
+            py-5
+            text-left
+            transition-all
+            duration-300
+            hover:bg-gray-50
+          "
+        >
+          <span
+            className={`
+              text-base
+              md:text-lg
+              font-semibold
+              transition-colors
+              ${isOpen ? 'text-[#08647d]' : 'text-gray-900'}
+            `}
+          >
+            {faq.question}
+          </span>
+
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="
+              min-w-[40px]
+              h-10
+              w-10
+              rounded-full
+              bg-[#08647d]/10
+              flex
+              items-center
+              justify-center
+            "
+          >
+            <ChevronDown className="w-5 h-5 text-[#08647d]" />
+          </motion.div>
+        </button>
+
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div
+                className="
+                  px-6
+                  pb-6
+                  text-gray-600
+                  leading-relaxed
+                  text-sm
+                  md:text-base
+                "
+              >
+                {faq.answer}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  })}
+</div>
+
       </div>
     </section>
   );

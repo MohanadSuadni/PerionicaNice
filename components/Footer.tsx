@@ -5,11 +5,24 @@ import Image from "next/image";
 import { useState } from "react";
 import { logo2 } from "@/public";
 import { footerItems, footerSocialsItems } from "@/constants";
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
+import { languages } from "@/constants/languages";
 
 export default function Footer() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-
+const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) => {
+    if (itemId === "about") {
+      e.preventDefault();
+      setIsAboutOpen(true);
+    } else if (itemId === "contact") {
+      e.preventDefault();
+      setIsContactOpen(true);
+    }
+  };
+  const { setLang, lang } = useLang();
+  const t = getDict(lang);
   return (
     <div className="w-full py-10 padding-x bg-[#064c5d]">
       <div className="w-full flex items-center justify-center flex-col gap-7">
@@ -28,19 +41,18 @@ export default function Footer() {
         {/* Ostali footer linkovi */}
         <div className="flex items-center gap-4 xm:flex-col sm:flex-col">
            <button onClick={() => setIsAboutOpen(true)} className="text-[#BCBCBC] hover:text-white transition">
-            O nama
+
           </button>
-          <button onClick={() => setIsContactOpen(true)} className="text-[#BCBCBC] hover:text-white transition">
-            Kontakt
-          </button>
+          
           {footerItems.map((item) => (
             <Link
-              href={item.href}
-              key={item.id}
-              className="paragraph font-normal leading-tight text-[#BCBCBC]"
-            >
-              {item.title}
-            </Link>
+                key={item.id}
+                href={item.href}
+                onClick={(e) => handleNavClick(e, item.id)}
+                className="text-white text-[18px] font-[Inter] hover:text-[#fec502] transition"
+              >
+                {t.nav?.[item.id] || item.id}
+              </Link>
           ))}
         </div>
 

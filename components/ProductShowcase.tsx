@@ -5,44 +5,47 @@ import { TextMask } from "@/animations";
 import { useState, useEffect } from "react";
 import { icons } from "@/public";
 import { textAnimation } from "@/motion";
-
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 export default function ProductShowcase() {
   const [isClient, setIsClient] = useState(false);
 const { scrollYProgress } = useScroll();
 const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 const [isContactOpen, setIsContactOpen] = useState(false);
 
-  const cards = [
-    {
-      id: "express",
-      title: "Premium korisnici",
-      text: "Omogućavamo izbor praška i deterdženta po vašoj želji, kako biste dobili baš onaj miris i kvalitet koji volite...",
-      icon: "/icons/expertise.png",
-    },
-    {
-      id: "eco",
-      title: "Ekološki deterdženti",
-      text: "Koristimo samo bezbedne, ekološke deterdžente koji čuvaju tkanine i prirodu.",
-      icon: "/icons/tshirt.png",
-    },
-    {
-      id: "equipment",
-      title: "Profesionalna oprema",
-      text: "Najmodernije industrijske mašine garantuju najviši kvalitet usluge.",
-      icon: "/icons/perks_11264773.png",
-    },
-  ];
+const { lang } = useLang();
+const dict = getDict(lang);
+
+//الخيارات للkartice
+const cards = [
+  {
+    id: "express",
+    title: dict.productShowcase.express.title,
+    text: dict.productShowcase.express.text,
+    icon: "/icons/expertise.png",
+  },
+  {
+    id: "eco",
+    title: dict.productShowcase.eco.title,
+    text: dict.productShowcase.eco.text,
+    icon: "/icons/tshirt.png",
+  },
+  {
+    id: "equipment",
+    title: dict.productShowcase.equipment.title,
+    text: dict.productShowcase.equipment.text,
+    icon: "/icons/perks_11264773.png",
+  },
+];
 
   // First card open by default, active može biti string ili null
   const [active, setActive] = useState<string | null>(cards[0].id);
 
   useEffect(() => setIsClient(true), []);
   if (!isClient) return null;
-
-  const phares1 = ["Pranje & peglanje"];
-  const phares2 = [
-    "Naša posvećenost kvalitetu, ekologiji i lokalnoj zajednici čini nas najboljim izborom za vaše potrebe pranja i peglanja veša.",
-  ];
+// العنوان الرئيسي والنصوص
+  const phares1 = [dict.productShowcase.title];
+  const phares2 = [dict.productShowcase.desc];
 
   // Pronalaženje trenutno aktivne kartice
   const activeCard = cards.find((c) => c.id === active);
@@ -150,7 +153,7 @@ const [isContactOpen, setIsContactOpen] = useState(false);
       w-fit
     "
   >
-    Kontaktiraj nas
+    {dict.contact.title}
   </button>
 </div>
 

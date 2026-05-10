@@ -6,32 +6,34 @@ import { Navbar } from "@/components";
 import { textAnimation } from "@/motion";
 import { Search, Droplets, Shirt, Package } from "lucide-react";
 import Image from "next/image";
-
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 export default function UslugainseClean() {
   const sectionRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-
+const{ lang } = useLang();
+const dict = getDict(lang);
   const steps = [
     {
       icon: <Search size={22} />,
-      title: "Pranje",
-      text: "Profesionalne industrijske mašine, posebne ture, pravilna temperatura i sredstva za svaku vrstu tkanine."
+      title: dict.productShowcase.express.title,
+      text: dict.productShowcase.express.text
     },
     {
       icon: <Droplets size={22} />,
-      title: "Sušenje",
-      text: "Kontrola temperature, zaštita delikatnih materijala i higijenski uslovi bez prašine i vlage."
+      title: dict.productShowcase.equipment.title,
+      text: dict.productShowcase.equipment.text
     },
     {
       icon: <Shirt size={22} />,
-      title: "Peglanje",
-      text: "Ravno, uredno, bez pregorevanja, sa parnim stanicama visokog pritiska."
+      title: dict.productShowcase.eco.title,
+      text: dict.productShowcase.eco.text
     },
     {
       icon: <Package size={22} />,
-      title: "Preuzimanje i dostava",
-      text: "Dostava za fizička lica — Novi Beograd (minimum 1300 RSD, besplatna dostava). Obrenovac — bez ograničenja i besplatna dostava."
+      title: dict.usluga.title,
+      text: dict.usluga.dostavaText
     }
   ];
 
@@ -50,7 +52,7 @@ export default function UslugainseClean() {
               whileInView="enter"
               viewport={{ once: true }}
             >
-              Kako funkcioniše naša usluga
+          {dict.usluga.heading}
             </motion.h1>
 
             <motion.div
@@ -62,7 +64,7 @@ export default function UslugainseClean() {
             />
 
             <p className="text-gray-600 mb-16 max-w-2xl">
-              Preuzimamo vaš veš, peremo, sušimo i vraćamo direktno na vaša vrata.
+              {dict.usluga.description}
             </p>
 
             <div className="relative w-full flex flex-col gap-10">

@@ -5,9 +5,15 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useRef, useState } from "react";
 import { textAnimation } from "@/motion";
 import { X } from "lucide-react";
+import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 
 export default function Pricing() {
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+const{ lang } = useLang();
+const dict = getDict(lang); 
+
+
+ const sectionRef = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
@@ -17,24 +23,7 @@ export default function Pricing() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 
-  const items = [
-    { icon: "/icons/laundry-service (1).png", name: "Pranje i sušenje 1 mašina do 5kg veša", price: "1090 RSD" },
-    { icon: "/icons/dry.png", name: "Pranje i sušenje preko 6kg", price: "200 RSD/kg" },
-    { icon: "/icons/iron.png", name: "Peglanje", price: "320 RSD/kg" },
-    { icon: "/icons/laundry-service.png", name: "Pranje i peglanje", price: "460 RSD/kg" },
-    { icon: "/icons/shirt (1).png", name: "Košulje pranje i peglanje", price: "400 RSD/kom" },
-    { icon: "/icons/work.png", name: "Košulje samo peglanje", price: "300 RSD/kom" },
-    { icon: "/icons/skirt.png", name: "Suknje svečane", price: "po dogovoru" },
-    { icon: "/icons/sleep.png", name: "Pranje jorgana, ćebadi, presvlaka za jorgane", price: "500 RSD/kg" },
-    { icon: "/icons/windows.png", name: "Zavese draperije", price: "500 RSD/kg" },
-    { icon: "/icons/curtains.png", name: "Zavese til, markiza ili drugi oblik konca", price: "1000 RSD/kom" },
-    { icon: "/icons/dress.png", name: "Kačenje posle pranja", price: "1000 RSD po garnisli" },
-    { icon: "/icons/wedding.png", name: "Venčanice i ostale delikatne stvari", price: "po dogovoru" },
-    { icon: "/icons/laundry-service.png", name: "Zimske jakne", price: "1500-2000 RSD/kom" },
-    { icon: "/icons/jersey.png", name: "Sve od vune", price: "400 RSD/kg" }
-  ];
-
-  // prikazuju se samo 2 u preview sekciji
+  const items = dict.pricing.items;
   const previewItems = items.slice(0, 2);
 
   return (
@@ -51,7 +40,7 @@ export default function Pricing() {
           whileInView="enter"
           viewport={{ once: true }}
         >
-          Cenovnik
+          {dict.pricing.title}
         </motion.h1>
 
         <motion.div
@@ -91,7 +80,7 @@ export default function Pricing() {
               onClick={() => setOpen(true)}
               className=" w-full px-8 py-4 text-[#fec502] font-[Inter] text-base border border-[#08647d] rounded-full bg-[#064c5d] hover:bg-[#08647d]/30 hover:border-[#08647d] transition drop-shadow-lg w-fit"
             >
-              Pogledaj ceo cenovnik
+              {dict.pricing.button}
             </button>
           </div>
         </div>
@@ -121,7 +110,7 @@ export default function Pricing() {
               </button>
 
               <h2 className="text-3xl font-bold text-center mb-10 text-[#08647d]">
-                Ceo Cenovnik
+                {dict.pricing.title}
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,7 +125,7 @@ export default function Pricing() {
                   onClick={() => setOpen(false)}
                   className="bg-[#08647d] text-white px-10 py-4 rounded-full font-semibold shadow-lg hover:bg-[#064c5d] transition duration-300"
                 >
-                  Zatvori cenovnik
+                  {dict.common.close}
                 </button>
               </div>
             </motion.div>
