@@ -130,7 +130,17 @@ export default function Hero() {
               </div>
             </div>
           </motion.div>
+<div className="sr-only">
+  <h1>Laundry service Belgrade Surčin</h1>
+  <p>
+    Professional laundry, ironing and dry cleaning service in Surčin,
+    Novi Beograd and Obrenovac. Fast pickup and delivery.
+  </p>
 
+  <p>
+    Прачечная Белград Сурчин. Стирка и глажка одежды с доставкой.
+  </p>
+</div>
         </div>
       </div>
     </div>

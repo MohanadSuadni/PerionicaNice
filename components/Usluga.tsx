@@ -17,22 +17,22 @@ const dict = getDict(lang);
   const steps = [
     {
       icon: <Search size={22} />,
-      title: dict.productShowcase.express.title,
-      text: dict.productShowcase.express.text
+     title: dict.usluga.title,
+      text: dict.usluga.pranjeText
     },
     {
       icon: <Droplets size={22} />,
-      title: dict.productShowcase.equipment.title,
-      text: dict.productShowcase.equipment.text
+      title: dict.usluga.susenje,
+      text: dict.usluga.susenjeText
     },
     {
       icon: <Shirt size={22} />,
-      title: dict.productShowcase.eco.title,
-      text: dict.productShowcase.eco.text
+     title: dict.usluga.peglanje,
+      text: dict.usluga.peglanjeText
     },
     {
       icon: <Package size={22} />,
-      title: dict.usluga.title,
+      title: dict.usluga.dostava,
       text: dict.usluga.dostavaText
     }
   ];

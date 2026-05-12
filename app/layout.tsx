@@ -10,22 +10,56 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Perionica veša Surčin | Pranje i peglanje Beograd - Nice",
+  metadataBase: new URL("https://www.perionica-vesa-nice.rs"),
+
+  title: "Perionica veša Surčin | прачечная Белград |laundry Belgrade | Nice",
+  
   description:
-    "Profesionalna perionica veša u Surčinu. Pranje, peglanje i dostava u Novom Beogradu i Obrenovcu.",
+    "Profesionalna perionica veša u Surčinu. Pranje, peglanje i dostava.",
+
+  alternates: {
+    canonical: "/sr",
+
+    languages: {
+      "sr-RS": "/sr",
+      "en-US": "/en",
+      "ru-RU": "/ru",
+    },
+  },
+
   keywords: [
-    "perionica veša Surčin",
-    "pranje veša Beograd",
-    "peglanje veša",
-    "hemijsko pranje veša",
-    "dry cleaning Beograd",
-    "Novi Beograd",
-    "Obrenovac"
+    "perionica veša Surčin preuzimanje i dostava",
+  "perionica veša Beograd dostava na adresu",
+  "pranje i sušenje veša Beograd pickup delivery",
+  "pranje veša na kilo Beograd Surčin",
+  "express perionica veša Beograd isti dan",
+  "samouslužna perionica veša Beograd 24h",
+  "hemijsko čišćenje Beograd pickup service",
+
+  // EN (jači search intent)
+  "laundry service Belgrade pickup delivery",
+  "wash and fold Belgrade same day service",
+  "dry cleaning Belgrade pickup service",
+  "laundry near Belgrade Airport Surcin",
+  "best laundry service Belgrade reviews",
+  "24 hour laundry service Belgrade Serbia",
+
+  // RU (širi reach)
+  "прачечная Белград доставка",
+  "прачечная Белград срочно",
+  "химчистка Белград с доставкой",
+
+  // “power search” / high intent
+  "best rated laundry Belgrade pickup delivery",
+  "cheap laundry service Belgrade same day",
+  "laundry service near me Surcin open now",
+  "top dry cleaners Belgrade reviews",
   ],
+
   openGraph: {
-    title: "Perionica veša Nice | Surčin",
+    title: "Nice Perionica",
     description:
-      "Pranje, sušenje i peglanje veša uz brzu i pouzdanu uslugu u Beogradu.",
+      "Pranje, sušenje i peglanje veša uz brzu i pouzdanu uslugu.",
     url: "https://www.perionica-vesa-nice.rs",
     siteName: "Nice Perionica",
     locale: "sr_RS",

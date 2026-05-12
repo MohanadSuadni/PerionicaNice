@@ -4,7 +4,6 @@ import { Footer } from "@/components";
 import {Hero} from "@/components";
 import {LogoTicker} from "@/components";
 import MiniGalleryScroller from "@/components/MiniGalleryScroller";
-
 export const metadata: Metadata = {
   title: "Najčešća pitanja | Perionica veša Surčin-Novi Beograd - Nice",
   description: "Odgovori na pitanja o pranju, peglanju i dostavi veša u Beogradu.",
