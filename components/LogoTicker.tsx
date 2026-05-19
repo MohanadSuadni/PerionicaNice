@@ -12,7 +12,7 @@ export default function LogoTicker() {
 						key={item.id}>
 						<Image
 							src={item.src}
-							alt="asd"
+							alt="Logo perionice veša Nice"
 							className="w-full h-auto"
 						/>
 					</div>

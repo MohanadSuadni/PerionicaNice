@@ -108,8 +108,8 @@ export default function Hero() {
                     alt="Instagram"
                     width={35}
                     height={35}
-                      loading="eager"
-  priority
+                    loading="eager"
+                    priority
                   />
                 </div>
 

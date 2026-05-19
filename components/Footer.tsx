@@ -30,7 +30,7 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
         <div>
           <Image
             src={logo2}
-            alt="logo"
+            alt="Logo perionice veša Nice"
             width={100}
             height={40}
           />
@@ -41,9 +41,7 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
 
         {/* Ostali footer linkovi */}
         <div className="flex items-center gap-4 xm:flex-col sm:flex-col">
-           <button onClick={() => setIsAboutOpen(true)} className="text-[#BCBCBC] hover:text-white transition">
-
-          </button>
+           
           
           {footerItems.map((item) => (
             <Link
@@ -72,7 +70,7 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
         </div>
 
         <div className="flex items-center">
-          <p className="text-[#BCBCBC] paragraph font-normal">
+          <p className="text-white/80 paragraph font-normal">
             © 2025 Perionica veša Nice, M.sudani. All rights reserved...
           </p>
         </div>

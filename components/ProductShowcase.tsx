@@ -128,9 +128,9 @@ const cards = [
               animate={{ opacity: 1, y: 0 }}
               className="p-10 border-2 border-[#08647d] rounded-2xl shadow-md bg-white"
             >
-              <h3 className=" font-[Inter] lg:font-[Inter] text-xl text-[#08647d] mb-2">
-                {activeCard.title}
-              </h3>
+              <h2 className="font-[Inter] lg:font-[Inter] text-xl text-[#08647d] mb-2">
+  {activeCard.title}
+</h2>
               <p className="text-gray-700 leading-relaxed">
                 {activeCard.text}
               </p>
