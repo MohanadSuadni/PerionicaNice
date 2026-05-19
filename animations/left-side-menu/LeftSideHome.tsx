@@ -68,6 +68,7 @@ export default function LeftSideHome() {
               lang === "sr" ? "RS" :
               lang === "en" ? "GB" : "RU"
             }
+            aria-label={lang}
             svg
             style={{
               width: "1.2em",
