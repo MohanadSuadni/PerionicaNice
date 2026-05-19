@@ -33,13 +33,7 @@ export default function Hero() {
     type="video/mp4"
   />
 
-  <track
-    kind="captions"
-    src="/captions.vtt"
-    srcLang="en"
-    label="English captions"
-    default
-  />
+
 </video>
 
       {/* OVERLAY */}
