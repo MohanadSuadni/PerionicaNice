@@ -10,7 +10,6 @@ import { logo } from "@/public";
 import { navVariants } from "@/motion";
 import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
-import ReactCountryFlag from "react-country-flag";
 
 export default function LeftSideHome() {
   const [isActive, setIsActive] = useState(false);
@@ -63,18 +62,25 @@ export default function LeftSideHome() {
           "
         >
           {/* FLAG (GLAVNI UX ELEMENT) */}
-          <ReactCountryFlag
-            countryCode={
-              lang === "sr" ? "RS" :
-              lang === "en" ? "GB" : "RU"
-            }
-            aria-label={lang}
-            svg
-            style={{
-              width: "1.2em",
-              height: "1.2em",
-            }}
-          />
+            <Image
+          src={
+            lang === "sr"
+              ? "/flags/rs.png"
+              : lang === "en"
+              ? "/flags/en.png"
+              : "/flags/ru.webp"
+          }
+          alt={
+            lang === "sr"
+              ? "Srpski jezik"
+              : lang === "en"
+              ? "English language"
+              : "Русский язык"
+          }
+          width={20}
+          height={20}
+          className="rounded-sm"
+        />
       
           {/* TEXT */}
           <span className="text-white hover:text-[#fec502] text-sm font-medium">
@@ -107,17 +113,19 @@ export default function LeftSideHome() {
                   transition
                 "
               >
-                <ReactCountryFlag
-                  countryCode={
-                    lng.code === "sr" ? "RS" :
-                    lng.code === "en" ? "GB" : "RU"
-                  }
-                  svg
-                  style={{
-                    width: "1.2em",
-                    height: "1.2em",
-                  }}
-                />
+                     <Image
+                src={
+                  lng.code === "sr"
+                    ? "/flags/rs.png"
+                    : lng.code === "en"
+                    ? "/flags/en.png"
+                    : "/flags/ru.webp"
+                }
+                alt={lng.label}
+                width={18}
+                height={18}
+                className="rounded-sm"
+              />
       
                 <span className="text-sm text-gray-800">
                   {lng.label}

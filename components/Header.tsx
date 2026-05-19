@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
-import ReactCountryFlag from "react-country-flag";
 import {
   usePathname,
   useRouter,
@@ -122,18 +121,25 @@ href={
     "
   >
     {/* FLAG (GLAVNI UX ELEMENT) */}
-    <ReactCountryFlag
-      countryCode={
-        lang === "sr" ? "RS" :
-        lang === "en" ? "GB" : "RU"
-      }
-      aria-label={lang}
-      svg
-      style={{
-        width: "1.3em",
-        height: "1.3em",
-      }}
-    />
+    <Image
+  src={
+    lang === "sr"
+      ? "/flags/rs.png"
+      : lang === "en"
+      ? "/flags/en.png"
+      : "/flags/ru.webp"
+  }
+  alt={
+    lang === "sr"
+      ? "Srpski jezik"
+      : lang === "en"
+      ? "English language"
+      : "Русский язык"
+  }
+  width={20}
+  height={20}
+  className="rounded-sm"
+/>
 
     {/* TEXT */}
           <span className="text-white hover:text-[#fec502] text-sm font-medium">
@@ -166,17 +172,19 @@ href={
             transition
           "
         >
-          <ReactCountryFlag
-            countryCode={
-              lng.code === "sr" ? "RS" :
-              lng.code === "en" ? "GB" : "RU"
-            }
-            svg
-            style={{
-              width: "1.2em",
-              height: "1.2em",
-            }}
-          />
+        <Image
+  src={
+    lng.code === "sr"
+      ? "/flags/rs.png"
+      : lng.code === "en"
+      ? "/flags/en.png"
+      : "/flags/ru.webp"
+  }
+  alt={lng.label}
+  width={18}
+  height={18}
+  className="rounded-sm"
+/>
 
           <span className="text-sm text-gray-800">
             {lng.label}
