@@ -4,12 +4,13 @@ import { Heading } from "@/components";
 import { motion } from "framer-motion";
 import { textAnimation } from "@/motion";
 import { testimonials } from "@/constants";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 
 export default function Testimonials() {
-    const { lang } = useLang();
-const dict = getDict(lang);
+    const params = useParams();
+    const lang = (params.lang as "sr" | "en" | "ru") || "sr";
+    const dict = getDict(lang);
   const phares = [dict.testimonials.heading];
   const phares1 = [
     "„Briga o vašem vešu sa preciznošću i posvećenošću,",

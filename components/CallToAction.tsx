@@ -7,7 +7,7 @@ import { Heading } from "@/components";
 import { ArrowRight, spring, star } from "@/public";
 import { Star, X } from "lucide-react";
 import emailjs from "@emailjs/browser"; 
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 
 export default function CallToAction() {
@@ -17,7 +17,8 @@ export default function CallToAction() {
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
 
-  const { lang } = useLang();
+  const params = useParams();
+  const lang = (params.lang as "sr" | "en" | "ru") || "sr";
   const t = getDict(lang);
   const phares1 = [t.cta?.phare1 || "Utisci naših klijenata"];
   const phares2 = [

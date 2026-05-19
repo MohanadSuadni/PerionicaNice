@@ -13,7 +13,7 @@ export default function LogoTicker() {
 						<Image
 							src={item.src}
 							alt="asd"
-							className="w-full"
+							className="w-full h-auto"
 						/>
 					</div>
 				))}

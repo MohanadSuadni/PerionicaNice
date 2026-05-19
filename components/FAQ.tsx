@@ -4,12 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { textAnimation } from "@/motion";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 import { FAQItem } from "@/types/dict";
 
 export default function FAQRinseClean() {
-  const { lang } = useLang();
+  const params = useParams();
+  const lang = (params.lang as "sr" | "en" | "ru") || "sr";
   const dict = getDict(lang);
 
   const faqs: FAQItem[] = dict.faq;

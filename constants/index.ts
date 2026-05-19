@@ -27,19 +27,19 @@ import type { NavKey } from "@/types/dict";
  */
 export const navigationItems: { id: NavKey; href: string }[] = [
   { id: "home", href: "/" },
-  { id: "about", href: "/about" },
+  { id: "about", href: "#about" },
   { id: "services", href: "/usluge" },
   { id: "pricing", href: "/pricing" },
   { id: "faq", href: "/faq" },
   { id: "clients", href: "/#RV" },
-  { id: "contact", href: "/contact" },
+  { id: "contact", href: "#contact" },
 ];
 /**
  * Footer navigacija
  */
 export const footerItems: { id: NavKey; href: string }[] = [
-  { id: "about", href: "/about" },
-  { id: "contact", href: "/contact" },
+  { id: "about", href: "#about" },
+  { id: "contact", href: "#contact" },
 
   { id: "services", href: "/usluge#USLUGE" },
   { id: "pricing", href: "/pricing#CN" },

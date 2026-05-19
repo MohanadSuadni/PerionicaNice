@@ -5,7 +5,7 @@ import { TextMask } from "@/animations";
 import { useState, useEffect } from "react";
 import { icons } from "@/public";
 import { textAnimation } from "@/motion";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 export default function ProductShowcase() {
   const [isClient, setIsClient] = useState(false);
@@ -13,7 +13,8 @@ const { scrollYProgress } = useScroll();
 const y = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
 const [isContactOpen, setIsContactOpen] = useState(false);
 
-const { lang } = useLang();
+const params = useParams();
+const lang = (params.lang as "sr" | "en" | "ru") || "sr";
 const dict = getDict(lang);
 
 //الخيارات للkartice
@@ -108,8 +109,14 @@ const cards = [
                   ${active === c.id ? "border-[#08647d] shadow-md" : "border-gray-300"}
                 `}
               >
-                <Image src={c.icon} alt={c.title} width={35} height={35} />
-                <span className="mt-2 text-sm  text-[#08647d]   font-[Inter] lg:font-[Inter]">{c.title}</span>
+<Image
+  src={c.icon}
+  alt={c.title}
+  width={35}
+  height={35}
+  sizes="35px"
+/>                
+<span className="mt-2 text-sm  text-[#08647d]   font-[Inter] lg:font-[Inter]">{c.title}</span>
               </button>
             ))}
           </div>

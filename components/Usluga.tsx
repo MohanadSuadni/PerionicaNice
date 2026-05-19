@@ -6,13 +6,15 @@ import { Navbar } from "@/components";
 import { textAnimation } from "@/motion";
 import { Search, Droplets, Shirt, Package } from "lucide-react";
 import Image from "next/image";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
+
 import { getDict } from "@/lib/lang";
 export default function UslugainseClean() {
   const sectionRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
-const{ lang } = useLang();
+const params = useParams();
+const lang = (params.lang as "sr" | "en" | "ru") || "sr";
 const dict = getDict(lang);
   const steps = [
     {

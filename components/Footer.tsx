@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { logo2 } from "@/public";
 import { footerItems, footerSocialsItems } from "@/constants";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
 
@@ -21,7 +21,8 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
       setIsContactOpen(true);
     }
   };
-  const { setLang, lang } = useLang();
+  const params = useParams();
+  const lang = (params.lang as "sr" | "en" | "ru") || "sr";
   const t = getDict(lang);
   return (
     <div className="w-full py-10 padding-x bg-[#064c5d]">

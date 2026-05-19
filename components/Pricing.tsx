@@ -5,11 +5,12 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useRef, useState } from "react";
 import { textAnimation } from "@/motion";
 import { X } from "lucide-react";
-import { useLang } from "@/context/LangContext";
+import { useParams } from "next/navigation";
 import { getDict } from "@/lib/lang";
 
 export default function Pricing() {
-const{ lang } = useLang();
+const params = useParams();
+const lang = (params.lang as "sr" | "en" | "ru") || "sr";
 const dict = getDict(lang); 
 
 

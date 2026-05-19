@@ -1,124 +1,159 @@
 "use client";
-import Navbar from "./Navbar";
+
 import Image from "next/image";
-import { logo } from "@/public";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useParams, useRouter, usePathname } from "next/navigation";
+
+import Navbar from "./Navbar";
+import { logo } from "@/public";
 import { navVariants } from "@/motion";
-import { useLang } from "@/context/LangContext";
+import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
 import ReactCountryFlag from "react-country-flag";
+
 export default function LeftSideHome() {
   const [isActive, setIsActive] = useState(false);
-  const { lang, setLang } = useLang();
+  const [open, setOpen] = useState(false); // ✔ FIX
+
+  const params = useParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const lang = (params.lang as "sr" | "en" | "ru") || "sr";
+  const t = getDict(lang);
+
+  const changeLanguage = (newLang: string) => {
+    const segments = pathname.split("/");
+    segments[1] = newLang;
+    router.push(segments.join("/"));
+  };
 
   return (
     <>
-      {/* Gornji navbar container */}
       <motion.div
         variants={navVariants}
         initial="initial"
         whileInView="enter"
         viewport={{ once: true }}
-        className="fixed top-0 left-0 w-full flex items-center justify-between gap-5 padding-x py-[12px] 
-                   bg-gradient-to-r from-black/70 via-white/0 to-white/0 shadow-md  
-                   z-[999] transition-all duration-500"
+        className="fixed top-0 left-0 w-full flex items-center justify-between gap-5 px-6 py-3 
+        bg-gradient-to-r from-black/70 via-white/0 to-white/0 z-[999]"
       >
-        {/* Logo */}
+        {/* LOGO */}
         <div>
           <Image src={logo} alt="logo" width={120} height={70} />
         </div>
-<div className="flex items-center bg-black/60 backdrop-blur-xl px-1 py-1 rounded-full border border-white/20">
 
-  {languages.map((lng) => {
-    const active = lang === lng.code;
-
-    return (
-      <button
-        key={lng.code}
-        onClick={() => setLang(lng.code as "sr" | "en" | "ru")}
-        className="relative flex items-center gap-1 px-3 py-1 text-xs rounded-full transition-all"
-      >
-        {/* FLAG */}
-        <ReactCountryFlag
-          countryCode={
-            lng.code === "sr"
-              ? "RS"
-              : lng.code === "en"
-              ? "GB"
-              : "RU"
-          }
-          svg
-          style={{
-            width: "1.1em",
-            height: "1.1em",
-            borderRadius: "3px",
-          }}
-        />
-
-        {/* LABEL */}
-        <span
-          className={`uppercase tracking-wide transition-colors ${
-            active ? "text-black font-semibold" : "text-white"
-          }`}
+        {/* LANGUAGE SWITCH */}
+      
+                  {/* LANG SWITCH */}
+             <div className="relative">
+        {/* TOGGLE */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="
+            flex items-center gap-2
+            px-3 py-1.5
+            rounded-full
+            bg-white/10 backdrop-blur-md
+            border border-white/20
+            hover:bg-white/20
+            transition
+            active:scale-95
+          "
         >
-          {lng.label}
-        </span>
-
-        {/* ACTIVE BACKGROUND */}
-        {active && (
-          <motion.div
-            layoutId="lang-indicator"
-            className="absolute inset-0 bg-yellow-400 rounded-full -z-10"
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          {/* FLAG (GLAVNI UX ELEMENT) */}
+          <ReactCountryFlag
+            countryCode={
+              lang === "sr" ? "RS" :
+              lang === "en" ? "GB" : "RU"
+            }
+            svg
+            style={{
+              width: "1.2em",
+              height: "1.2em",
+            }}
           />
+      
+          {/* TEXT */}
+          <span className="text-white hover:text-[#fec502] text-sm font-medium">
+            {lang.toUpperCase()}
+          </span>
+        </button>
+      
+        {/* DROPDOWN */}
+        {open && (
+          <div className="
+            absolute right-0 mt-2
+            min-w-[140px]
+            rounded-xl
+            bg-white/90 backdrop-blur-xl
+            shadow-xl
+            overflow-hidden
+            z-50
+          ">
+            {languages.map((lng) => (
+              <button
+                key={lng.code}
+                onClick={() => {
+                  changeLanguage(lng.code);
+                  setOpen(false);
+                }}
+                className="
+                  w-full flex items-center gap-2
+                  px-4 py-2
+                  hover:bg-gray-100
+                  transition
+                "
+              >
+                <ReactCountryFlag
+                  countryCode={
+                    lng.code === "sr" ? "RS" :
+                    lng.code === "en" ? "GB" : "RU"
+                  }
+                  svg
+                  style={{
+                    width: "1.2em",
+                    height: "1.2em",
+                  }}
+                />
+      
+                <span className="text-sm text-gray-800">
+                  {lng.label}
+                </span>
+              </button>
+            ))}
+          </div>
         )}
-      </button>
-    );
-  })}
-</div>
-        {/* Hamburger dugme */}
+      </div>
+        {/* HAMBURGER */}
         <div className="z-10">
           <div
             onClick={() => setIsActive(!isActive)}
             className="w-[50px] h-[50px] rounded-full bg-[#08647d] cursor-pointer flex items-center justify-center relative"
           >
             <div
-              className={`w-[50%] h-[2px] bg-[#fec502] absolute ${
-                !isActive && "top-[45%]"
-              } transform -translate-x-1/3 -translate-y-1/3`}
+              className="w-[50%] h-[2px] bg-[#fec502] absolute transition-transform"
               style={{
-                transform: isActive ? "rotate(45deg)" : "none",
-                transition: "transform 0.3s",
+                transform: isActive ? "rotate(45deg)" : "translateY(-6px)",
               }}
             />
             <div
-              className={`w-[45%] h-[2px] bg-[#fec502] absolute ${
-                !isActive && "top-[55%]"
-              } transform -translate-x-1/3 -translate-y-1/3`}
+              className="w-[50%] h-[2px] bg-[#fec502] absolute transition-opacity"
               style={{
-                transform: isActive ? "rotate(-45deg)" : "none",
-                transition: "transform 0.3s",
+                opacity: isActive ? 0 : 1,
               }}
             />
             <div
-              className={`w-[50%] h-[2px] bg-[#fec502] absolute ${
-                !isActive && "top-[65%]"
-              } transform -translate-x-1/3 -translate-y-1/3`}
+              className="w-[50%] h-[2px] bg-[#fec502] absolute transition-transform"
               style={{
-                transform: isActive ? "rotate(-45deg)" : "none",
-                transition: "transform 0.3s",
+                transform: isActive ? "rotate(-45deg)" : "translateY(6px)",
               }}
             />
           </div>
         </div>
-
-
-
-        
       </motion.div>
- 
-      {/* Otvaranje navigacije */}
+
       <AnimatePresence mode="wait">
         {isActive && <Navbar closeMenu={() => setIsActive(false)} />}
       </AnimatePresence>
