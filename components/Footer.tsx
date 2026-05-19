@@ -95,7 +95,7 @@ const socialNames = {
 </div>
 
          <div className="mt-6 border-t border-border dark:border-dark_border pt-4 text-center text-sm text-white">
-          &copy; {new Date().getFullYear()} perionice veša <span className="text-yellow-400/80 Family=Arial, sans-serif">Nice</span>. Dizajn by{" "}
+          &copy; {new Date().getFullYear()} perionice veša <span className="text-[#fec502] font-semibold font-sans"> Nice</span>. Dizajn by{" "}
           <a href="tel:+381695546541" className="text-white hover:text-primary font-semibold">
             M. Sudani
           </a>
