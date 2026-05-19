@@ -187,10 +187,29 @@ href={
   )}
 </div>
             {/* LOGIN */}
-            <Button
-              className="text-[#fec502] px-4 py-2 bg-[#08647d] rounded-md drop-shadow-lg"
-              title={t.nav?.login || "Login"}
-            />
+    <button
+  aria-label="Uloguj se"
+  className="
+    px-6
+    py-3
+    rounded-full
+    border
+    border-white/20
+    bg-white/10
+    backdrop-blur-md
+text-yellow-400/80
+    font-medium
+    transition-all
+    duration-300
+    hover:bg-[#08647d]
+    hover:text-white
+    hover:border-[#08647d]
+    shadow-md
+    active:scale-95
+  "
+>
+  Uloguj se
+</button>
           </div>
         </div>
       </motion.div>

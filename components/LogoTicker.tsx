@@ -10,11 +10,14 @@ export default function LogoTicker() {
 					<div
 						className={`w-[200px] flex ${item.id == 6 && "mr-14"}`}
 						key={item.id}>
-						<Image
-							src={item.src}
-							alt="Logo perionice veša Nice"
-							className="w-full h-auto"
-						/>
+					<Image
+  src={item.src}
+  alt="Logo perionice veša Nice"
+  width={200}
+  height={60}
+  sizes="200px"
+  className="h-auto max-w-[200px] object-contain"
+/>
 					</div>
 				))}
 			</LogoMarquee>

@@ -21,6 +21,15 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
       setIsContactOpen(true);
     }
   };
+
+const socialNames = {
+  1: "Instagram",
+  2: "LinkedIn",
+  3: "Pinterest",
+  4: "X",
+  5: "YouTube",
+};
+
   const params = useParams();
   const lang = (params.lang as "sr" | "en" | "ru") || "sr";
   const t = getDict(lang);
@@ -28,12 +37,14 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
     <div className="w-full py-10 padding-x bg-[#064c5d]">
       <div className="w-full flex items-center justify-center flex-col gap-7">
         <div>
-          <Image
-            src={logo2}
-            alt="Logo perionice veša Nice"
-            width={100}
-            height={40}
-          />
+        <Image
+  src={logo2}
+  alt="Logo perionice veša Nice"
+  width={100}
+  height={40}
+  sizes="100px"
+  priority
+/>
         </div>
 
         {/* Footer linkovi */}
@@ -56,23 +67,38 @@ const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemId: string) 
         </div>
 
         {/* Socials */}
-        <div className="flex items-center gap-4">
-          {footerSocialsItems.map((item) => (
-            <Link href={item.href} key={item.id}>
-              <Image
-                src={item.src}
-                alt="social icon"
-                width={30}
-                height={30}
-              />
-            </Link>
-          ))}
-        </div>
+    <div className="flex items-center gap-4">
+  {footerSocialsItems.map((item) => (
+    <Link
+      href={item.href}
+      key={item.id}
+      aria-label={
+        item.id === 1
+          ? "Instagram"
+          : item.id === 2
+          ? "LinkedIn"
+          : item.id === 3
+          ? "Pinterest"
+          : item.id === 4
+          ? "X"
+          : "YouTube"
+      }
+    >
+      <Image
+        src={item.src}
+        alt=""
+        width={30}
+        height={30}
+      />
+    </Link>
+  ))}
+</div>
 
-        <div className="flex items-center">
-          <p className="text-white/80 paragraph font-normal">
-            © 2025 Perionica veša Nice, M.sudani. All rights reserved...
-          </p>
+         <div className="mt-6 border-t border-border dark:border-dark_border pt-4 text-center text-sm text-white">
+          &copy; {new Date().getFullYear()} perionice veša <span className="text-yellow-400/80 Family=Arial, sans-serif">Nice</span>. Dizajn by{" "}
+          <a href="tel:+381695546541" className="text-white hover:text-primary font-semibold">
+            M. Sudani
+          </a>
         </div>
       </div>
 
