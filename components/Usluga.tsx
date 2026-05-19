@@ -88,52 +88,58 @@ const dict = getDict(lang);
           </div>
 
           {/* RIGHT SIDE – VIDEO */}
-          <div className="w-full flex flex-col items-center justify-start gap-6 lg:mt-40">
-            <div className="w-full h-96 relative flex items-center justify-center bg-gray-100 rounded-2xl overflow-hidden">
-              {/* MASKA */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#08647d] to-yellow-100 opacity-40 mix-blend-multiply pointer-events-none rounded-2xl"></div>
+        {/* RIGHT SIDE – VIDEO */}
+<div className="w-full flex flex-col items-center justify-start gap-6 lg:mt-40">
+  <div className="w-full h-96 relative flex items-center justify-center bg-gray-100 rounded-2xl overflow-hidden">
+    
+    {/* MASKA */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#08647d] to-yellow-100 opacity-40 mix-blend-multiply pointer-events-none rounded-2xl"></div>
 
-             {/* PLAY BUTTON */}
-{!isPlaying && (
-  <button
-    onClick={() => setIsPlaying(true)}
-    aria-label="Play video"
-    className="absolute z-10 w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-[#08647d] to-yellow-400 shadow-lg text-white text-4xl hover:scale-105 transform transition-all"
-  >
-    ▶
-  </button>
-)}
+    {/* PLAY BUTTON */}
+    {!isPlaying && (
+      <button
+        onClick={() => setIsPlaying(true)}
+        aria-label="Play video"
+        className="absolute z-10 w-24 h-24 flex items-center justify-center rounded-full bg-gradient-to-br from-[#08647d] to-yellow-400 shadow-lg text-white text-4xl hover:scale-105 transform transition-all"
+      >
+        ▶
+      </button>
+    )}
 
-{isPlaying ? (
-  <video
-    src="/videos/VID-20251127-WA0000.mp4"
-    controls
-    autoPlay
-    muted={isMuted}
-    className="w-full h-full object-cover rounded-2xl"
-  />
-) : (
-  <Image
-    src="/images/IMG-20251122-WA0011.jpg"
-    alt="Prikaz profesionalne perionice veša"
-    width={800}
-    height={400}
-    className="w-full h-full object-cover rounded-2xl"
-  />
-)}
+    {/* VIDEO / IMAGE */}
+    {isPlaying ? (
+      <video
+        src="/videos/VID-20251127-WA0000.mp4"
+        controls
+        autoPlay
+        muted={isMuted}
+        preload="none"
+        poster="/images/IMG-20251122-WA0011.jpg"
+        className="w-full h-full object-cover rounded-2xl"
+      />
+    ) : (
+      <Image
+        src="/images/IMG-20251122-WA0011.jpg"
+        alt="Prikaz profesionalne perionice veša"
+        width={800}
+        height={400}
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="w-full h-full object-cover rounded-2xl"
+      />
+    )}
 
-{/* MUTE BUTTON */}
-{isPlaying && (
-  <button
-    onClick={() => setIsMuted(!isMuted)}
-    aria-label={isMuted ? "Unmute video" : "Mute video"}
-    className="absolute bottom-4 right-4 z-20 bg-[#08647d]/80 text-white px-3 py-2 rounded-full hover:bg-[#08647d]/100 transition"
-  >
-    {isMuted ? "Unmute" : "Mute"}
-  </button>
-)}
-            </div>
-          </div>
+    {/* MUTE BUTTON */}
+    {isPlaying && (
+      <button
+        onClick={() => setIsMuted(!isMuted)}
+        aria-label={isMuted ? "Unmute video" : "Mute video"}
+        className="absolute bottom-4 right-4 z-20 bg-[#08647d]/80 text-white px-3 py-2 rounded-full hover:bg-[#08647d]/100 transition"
+      >
+        {isMuted ? "Unmute" : "Mute"}
+      </button>
+    )}
+  </div>
+</div>
         </div>
       </section>
     </>
