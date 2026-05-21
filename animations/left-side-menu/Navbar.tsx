@@ -6,19 +6,31 @@ import { navigationItems } from "@/constants";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { curve, menuSlide } from "@/motion";
-import { usePathname } from "next/navigation";
 import { useLang } from "@/context/LangContext";
 import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
+import {
+  usePathname,
+  useRouter,
+  useParams,
+} from "next/navigation";
 type NavbarProps = {
   closeMenu: () => void;
 };
 
+
 export default function Navbar({ closeMenu }: NavbarProps) {
+ 
+  const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
+
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
-  const { lang } = useLang();
+  const lang = (params.lang as "sr" | "en" | "ru") || "sr";
+
+const currentLang = languages.find((l) => l.code === lang) || languages[0];
+  // PREVODI
   const t = getDict(lang);
 
   // MODALS

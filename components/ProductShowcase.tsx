@@ -131,6 +131,7 @@ const cards = [
               <h2 className="font-[Inter] lg:font-[Inter] text-xl text-[#08647d] mb-2">
   {activeCard.title}
 </h2>
+
               <p className="text-gray-700 leading-relaxed">
                 {activeCard.text}
               </p>

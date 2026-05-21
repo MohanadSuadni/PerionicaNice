@@ -140,6 +140,7 @@ const dict = getDict(lang);
     )}
   </div>
 </div>
+
         </div>
       </section>
     </>
