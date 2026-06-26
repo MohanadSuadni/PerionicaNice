@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useParams, useRouter, usePathname } from "next/navigation";
 
 import Navbar from "./Navbar";
-import { logo } from "@/public";
+import { logo, premiumLogo } from "@/public";
 import { navVariants } from "@/motion";
 import { getDict } from "@/lib/lang";
 import { languages } from "@/constants/languages";
@@ -18,6 +18,7 @@ export default function LeftSideHome() {
   const params = useParams();
   const router = useRouter();
   const pathname = usePathname();
+const isPremiumPage = pathname.includes("/Perionica-vesa-Beograd-na-vodi");
 
   const lang = (params.lang as "sr" | "en" | "ru") || "sr";
   const t = getDict(lang);
@@ -40,8 +41,21 @@ export default function LeftSideHome() {
       >
         {/* LOGO */}
         <div>
-          <Image src={logo} alt="logo" width={120} height={70} />
-        </div>
+<Image
+  src={isPremiumPage ? premiumLogo : logo}
+  alt="Maestro Cleaning"
+  width={150}
+  height={100}
+  priority
+  className={`h-auto transition-all duration-300 ${
+    isPremiumPage ? "w-[100px]" : "w-[100px]"
+  }`}
+/>        </div>
+
+
+
+
+
 
         {/* LANGUAGE SWITCH */}
       

@@ -1,4 +1,6 @@
 export { default as logo } from './logotext-removebg-preview (2).png';
+export { default as premiumLogo } from "./images/logop.png";
+
 export { default as logo2 } from './Stylized__N__Logo_Design-removebg-preview__3_-removebg-preview.png';
 
 export { default as ArrowRight } from './arrow-right.svg';

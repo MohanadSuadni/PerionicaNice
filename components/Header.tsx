@@ -6,7 +6,7 @@ import { Button } from "@/components";
 import { navVariants } from "@/motion";
 import { MobileMenu } from "@/animations";
 import { navigationItems } from "@/constants";
-import { logo } from "@/public";
+import { logo, premiumLogo } from "@/public";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { getDict } from "@/lib/lang";
@@ -17,6 +17,9 @@ import {
   useParams,
 } from "next/navigation";
 
+
+
+
 export default function Navbar() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -25,7 +28,7 @@ export default function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
-
+const isPremiumPage = pathname.includes("/Perionica-vesa-Beograd-na-vodi");
   // LANG IZ URL-a
   const lang = (params.lang as "sr" | "en" | "ru") || "sr";
 const currentLang = languages.find((l) => l.code === lang) || languages[0];
@@ -78,12 +81,15 @@ const currentLang = languages.find((l) => l.code === lang) || languages[0];
 
           {/* LEFT */}
           <div className="flex items-center gap-6">
-         <Image
-  src={logo}
-  alt="logo"
-  width={351}
+<Image
+  src={isPremiumPage ? premiumLogo : logo}
+  alt="Maestro Cleaning"
+   width={351}
   height={170}
-  className="h-auto w-[150px]"
+  priority
+  className={`h-auto transition-all duration-300 ${
+    isPremiumPage ? "w-[130px]" : "w-[130px]"
+  }`}
 />
 
             {navigationItems.map((item) => (
