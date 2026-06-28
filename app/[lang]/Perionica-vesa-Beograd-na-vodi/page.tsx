@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Footer, Hero } from "@/components";
 import FloatingCallButton from "@/components/FloatingCallButton";
 
@@ -6,11 +7,34 @@ type Props = {
     lang: "sr" | "en" | "ru";
   };
 };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const lang = params.lang ?? "sr";
+
+  const titles = {
+    sr: "Perionica veša Beograd na vodi | Pranje, peglanje i dostava | NICE",
+    en: "Laundry Service Belgrade Waterfront | NICE",
+    ru: "Прачечная Белград на воде | NICE",
+  };
+
+  const descriptions = {
+    sr: "Perionica veša Beograd na vodi. Profesionalno pranje, peglanje, sušenje i dostava veša.",
+    en: "Premium laundry service in Belgrade Waterfront.",
+    ru: "Премиальная прачечная в Белграде на воде.",
+  };
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+  };
+}
 
 export default function Page({ params }: Props) {
   const lang = (params.lang as "sr" | "en" | "ru") ?? "sr";
 
   const content = {
+
+
+    
     sr: {
       h1: "Perionica veša Beograd na vodi – Premium pranje, peglanje i dostava",
 
@@ -185,6 +209,9 @@ export default function Page({ params }: Props) {
 
   return (
     <>
+
+
+    
          <Hero />
 
 
