@@ -29,7 +29,7 @@ export default function FloatingContactButtons() {
     >
       {/* CALL */}
       <Link
-        href="tel:+38163211161"
+        href="tel:+381692121985"
         aria-label="Pozovi"
         className="group flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-2xl"
       >
@@ -41,7 +41,7 @@ export default function FloatingContactButtons() {
 
       {/* WHATSAPP */}
      <Link
-  href="https://wa.me/38163211161"
+  href="https://wa.me/+381692121985"
   target="_blank"
   aria-label="WhatsApp"
   className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-2xl"
@@ -62,7 +62,7 @@ export default function FloatingContactButtons() {
 
       {/* VIBER */}
       <Link
-href="viber://add?number=38163211161"
+href="viber://add?number381692121985"
         aria-label="Viber"
         className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#7360F2] text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-2xl"
       >
