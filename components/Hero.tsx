@@ -84,7 +84,7 @@ export default function Hero() {
               </div>
 
               <a
-                href="tel:+38163211161"
+                href="tel:+381692121985"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-[#08647d] shadow-md hover:bg-[#07566b] transition-all mr-6 animate-float-horizontal"
                 aria-label="Pozovi nas"
               >
