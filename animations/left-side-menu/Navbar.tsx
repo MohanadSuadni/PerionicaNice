@@ -171,7 +171,7 @@ const currentLang = languages.find((l) => l.code === lang) || languages[0];
               {t.contact.title}
             </h2>
 
-            <p>📞 +38163211161</p>
+            <p>📞 +381692121985</p>
             <p>✉️ office@pranjeipeglanje.rs</p>
             <p>📍 Obrenovac, Beograd</p>
 

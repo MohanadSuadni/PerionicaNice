@@ -286,7 +286,7 @@ text-yellow-400/80
 
             <div className="space-y-2 mb-4 text-gray-800">
 
-              <p>📞 +38163211161</p>
+              <p>📞 +381692121985</p>
 
               <p>✉️ office@pranjeipeglanje.rs</p>
 
