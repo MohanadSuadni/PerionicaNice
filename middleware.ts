@@ -4,37 +4,45 @@ const locales = ["en", "ru", "sr"];
 const defaultLocale = "sr";
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const pathname = request.nextUrl.pathname;
 
-  // Skip Next internals + static files
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/favicon.ico") ||
-    pathname.startsWith("/videos") ||
-    pathname.startsWith("/images") ||
-    pathname.includes(".")
-  ) {
+  // لا نضيف اللغة إلى لوحة الإدارة
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
     return NextResponse.next();
   }
 
-  // Check if locale already exists
-  const hasLocale = locales.some(
+  // الملفات والمجلدات التي يجب ألا تمر عبر نظام اللغات
+  const publicFile =
+    pathname.startsWith("/videos/") ||
+    pathname.startsWith("/images/") ||
+    pathname.startsWith("/audio/") ||
+    pathname.startsWith("/fonts/") ||
+    pathname.startsWith("/uploads/") ||
+    pathname.match(/\.[^/]+$/);
+
+  if (publicFile) {
+    return NextResponse.next();
+  }
+
+  // إذا كان الرابط يحتوي على اللغة بالفعل
+  const pathnameHasLocale = locales.some(
     (locale) =>
-      pathname === `/${locale}` ||
-      pathname.startsWith(`/${locale}/`)
+      pathname.startsWith(`/${locale}/`) ||
+      pathname === `/${locale}`
   );
 
-  if (hasLocale) {
+  if (pathnameHasLocale) {
     return NextResponse.next();
   }
 
-  // Redirect to default locale
-  const url = request.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname}`;
-
-  return NextResponse.redirect(url);
+  // إضافة اللغة للموقع فقط
+  return NextResponse.redirect(
+    new URL(`/${defaultLocale}${pathname}`, request.url)
+  );
 }
 
 export const config = {
-  matcher: ["/((?!_next|favicon.ico).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico).*)",
+  ],
 };

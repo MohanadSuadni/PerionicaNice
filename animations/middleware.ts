@@ -6,7 +6,15 @@ const defaultLocale = "sr";
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // ako URL već ima locale
+  // Admin routes should NOT get a language prefix
+  if (
+    pathname === "/admin" ||
+    pathname.startsWith("/admin/")
+  ) {
+    return NextResponse.next();
+  }
+
+  // Check if URL already has a locale
   const pathnameHasLocale = locales.some(
     (locale) =>
       pathname.startsWith(`/${locale}/`) ||
@@ -17,7 +25,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // redirect "/" -> "/sr"
+  // Redirect all other routes to the default locale
   return NextResponse.redirect(
     new URL(`/${defaultLocale}${pathname}`, request.url)
   );

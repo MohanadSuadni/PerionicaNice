@@ -30,6 +30,7 @@ export const navigationItems: { id: NavKey; href: string }[] = [
   { id: "about", href: "#about" },
   { id: "services", href: "/usluge" },
   { id: "premium" as NavKey, href: "/Perionica-vesa-Beograd-na-vodi" },
+  { id: "blog" as NavKey, href: "/blog" },
 
   { id: "pricing", href: "/pricing" },
   { id: "faq", href: "/faq" },
@@ -42,6 +43,7 @@ export const navigationItems: { id: NavKey; href: string }[] = [
 export const footerItems: { id: NavKey; href: string }[] = [
   { id: "about", href: "#about" },
   { id: "contact", href: "#contact" },
+  { id: "blog" as NavKey, href: "/blog" },
 
   { id: "services", href: "/usluge#USLUGE" },
   { id: "pricing", href: "/pricing#CN" },

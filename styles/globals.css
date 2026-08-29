@@ -42,3 +42,14 @@ body::-webkit-scrollbar {
 .animate-float-horizontal {
   animation: float-horizontal 3s ease-in-out infinite;
 }
+
+
+.admin-desktop-sidebar {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .admin-desktop-sidebar {
+    display: none;
+  }
+}
