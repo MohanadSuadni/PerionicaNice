@@ -3,14 +3,14 @@
     "home": "Početna",
     "about": "O nama",
     "services": "Usluge",
-        "premium":"Premium",
-        "blog":"Blog",
-
+    "premium":"Premium",
+     "blog":"Blog",
     "pricing": "Cenovnik",
     "faq": "FAQ",
     "clients": "Naši klijenti",
     "contact": "Kontakt",
-    "login": "Uloguj se"
+    "login": "Uloguj se",
+    "businessLaundry": "B2B"
   },
 
   "hero": {
